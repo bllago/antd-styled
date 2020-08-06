@@ -1,4 +1,4 @@
-# antd-plus
+# antd-styled
 
 > AntdD + styled system. Extended antd components with additional style properties
 
