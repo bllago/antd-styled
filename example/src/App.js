@@ -1,10 +1,26 @@
 import React from 'react'
+import { Layout, Header, Content, Row, Col, ThemeProvider } from 'antd-plus'
+import { Typography } from 'antd'
 
-import { Img } from 'antd-plus'
-import 'antd-plus/dist/index.css'
+// import { ThemeProvider } from 'styled-components'
+
+import theme from './styles/theme'
 
 const App = () => {
-  return <Img src="/favicon.ico" alt="Test image" height="100px" position={'fixed'} left={'100px'} />
+  return (
+    <ThemeProvider theme={theme}>
+      <Layout minHeight="100%">
+        <Header px={theme.grid.paddings} color="#fff">Header</Header>
+        <Content px={theme.grid.paddings}>
+          <Row mb={16}>
+            <Col flex="1">
+              <Typography.Title>Page title</Typography.Title>
+            </Col>
+          </Row>
+        </Content>
+      </Layout>
+    </ThemeProvider>
+  )
 }
 
 export default App

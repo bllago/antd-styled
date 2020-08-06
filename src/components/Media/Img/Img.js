@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { withTheme } from 'styled-components'
+import styled from 'styled-components'
 import { compose, position, layout } from 'styled-system'
 import PropTypes from 'prop-types'
 
@@ -9,8 +9,7 @@ const Img = (props) => <Image {...props} />
 
 Img.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  height: PropTypes.string
+  alt: PropTypes.string.isRequired
 }
 
-export default withTheme(Img)
+export default Img
