@@ -1,9 +1,3 @@
-// import React from 'react'
-// import styles from './styles.module.css'
-
-// export const ExampleComponent = ({ text }) => {
-//   return <div className={styles.test}>Example Component: {text}</div>
-// }
 import Layout from './components/LayoutSystem/Layout'
 import Header from './components/LayoutSystem/Header'
 import Sider from './components/LayoutSystem/Sider'
