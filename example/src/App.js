@@ -1,5 +1,6 @@
 import React from 'react'
-import { Layout, Header, Content, Row, Col, ThemeProvider } from 'antd-plus'
+import { Layout, Header, Content, Row, Col } from 'antd-plus'
+import { ThemeProvider } from 'styled-components'
 import { Typography } from 'antd'
 
 // import { ThemeProvider } from 'styled-components'

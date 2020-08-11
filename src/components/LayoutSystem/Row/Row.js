@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 import { Row as AntRow } from 'antd'
-import styled from 'styled-components'
+
 import {
   compose,
   layout,
@@ -9,14 +10,13 @@ import {
   background,
   color
 } from 'styled-system'
-import { useTheme } from '../../../hooks'
 
 const StyledAntRow = styled(AntRow)(
   compose(layout, flexbox, background, color, space)
 )
 
 const Row = (props) => {
-  const theme = useTheme()
+  const theme = useContext(ThemeContext)
   return <StyledAntRow gutter={[theme.grid.gutters, 0]} {...props} />
 }
 
