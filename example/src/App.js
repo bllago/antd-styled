@@ -1,23 +1,26 @@
 import React from 'react'
-import { Layout, Header, Content, Row, Col } from 'antd-plus'
+import { Layout, Header, Content, PageWrapper } from 'antd-plus'
 import { ThemeProvider } from 'styled-components'
-import { Typography } from 'antd'
-
-// import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Layout minHeight="100%">
+      <Layout minHeight="auto">
         <Header px={theme.grid.paddings} color="#fff">Header</Header>
         <Content px={theme.grid.paddings}>
-          <Row mb={16}>
-            <Col flex="1">
-              <Typography.Title>Page title</Typography.Title>
-            </Col>
-          </Row>
+        <PageWrapper
+          alignMiddle
+          headingProps={{
+            title: "Clinic members",
+            subTitle: "Welcome your teammates! :)"
+          }}
+          graphicProps={{
+            src: 'https://www.facebook.com/images/fb_icon_325x325.png',
+            alt: 'FOI health'
+          }}>
+        </PageWrapper>
         </Content>
       </Layout>
     </ThemeProvider>
