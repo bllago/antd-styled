@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Button, Typography, Tooltip, Popconfirm } from 'antd'
+import { DeleteFilled } from '@ant-design/icons'
+
 import { DEFAULT_PROPS } from './constants'
 
 const ClinicRemove = (props) => {
@@ -20,6 +22,13 @@ const ClinicRemove = (props) => {
     question,
     itemName
   } = props
+
+  const iconNode = typeof icon === 'boolean' ? <DeleteFilled /> : icon
+  const iconNodeLeft =
+    typeof iconLeft === 'boolean' ? <DeleteFilled /> : iconLeft
+  const iconNodeRight =
+    typeof iconRight === 'boolean' ? <DeleteFilled /> : iconRight
+
   return (
     <Popconfirm
       title={
@@ -45,7 +54,7 @@ const ClinicRemove = (props) => {
           : DEFAULT_PROPS.cancelLabel
       }
     >
-      {!label && shape && (icon || iconLeft || iconRight) ? (
+      {!label && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           title={tooltipLabel || DEFAULT_PROPS.tooltipLabel}
           placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
@@ -53,7 +62,7 @@ const ClinicRemove = (props) => {
           <Button
             {...props}
             type={type || DEFAULT_PROPS.type}
-            icon={icon || iconLeft || iconRight}
+            icon={iconNode || iconNodeLeft || iconNodeRight}
             danger
           />
         </Tooltip>
@@ -61,11 +70,11 @@ const ClinicRemove = (props) => {
         <Button
           {...props}
           type={type || DEFAULT_PROPS.type}
-          icon={icon || iconLeft}
+          icon={iconNode || iconNodeLeft}
           danger
         >
           {label}
-          {iconRight}
+          {iconNodeRight}
         </Button>
       )}
     </Popconfirm>

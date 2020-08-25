@@ -17,6 +17,10 @@ import ClinicCreate from './components/Clinic/Actions/ClinicCreate'
 import ClinicEdit from './components/Clinic/Actions/ClinicEdit'
 import ClinicRemove from './components/Clinic/Actions/ClinicRemove'
 import ClinicSave from './components/Clinic/Actions/ClinicSave'
+import List from './components/List/List'
+import MainSimpleView from './components/Clinic/Components/MainSimpleView'
+import SimpleView from './components/Clinic/Components/SimpleView'
+import SimpleForm from './components/Clinic/Components/SimpleForm'
 
 export {
   Layout,
@@ -37,7 +41,11 @@ export {
   ClinicCreate,
   ClinicEdit,
   ClinicRemove,
-  ClinicSave
+  ClinicSave,
+  List,
+  MainSimpleView,
+  SimpleView,
+  SimpleForm
 }
 
 export default {
@@ -59,5 +67,9 @@ export default {
   ClinicCreate,
   ClinicEdit,
   ClinicRemove,
-  ClinicSave
+  ClinicSave,
+  List,
+  MainSimpleView,
+  SimpleView,
+  SimpleForm
 }

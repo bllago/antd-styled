@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Button, Tooltip } from 'antd'
+import { EditFilled } from '@ant-design/icons'
+
 import { DEFAULT_PROPS } from './constants'
 
 const ClinicEdit = (props) => {
@@ -13,13 +15,19 @@ const ClinicEdit = (props) => {
     shape,
     tooltipLabel
   } = props
+
+  const iconNode = typeof icon === 'boolean' ? <EditFilled /> : icon
+  const iconNodeLeft = typeof iconLeft === 'boolean' ? <EditFilled /> : iconLeft
+  const iconNodeRight =
+    typeof iconRight === 'boolean' ? <EditFilled /> : iconRight
+
   return (
     <Fragment>
-      {!label && shape && (icon || iconLeft || iconRight) ? (
+      {!label && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip title={tooltipLabel || DEFAULT_PROPS.tooltipLabel}>
           <Button
             {...props}
-            icon={icon || iconLeft || iconRight}
+            icon={iconNode || iconNodeLeft || iconNodeRight}
             danger={false}
             onClick={onClick}
           />
@@ -27,12 +35,12 @@ const ClinicEdit = (props) => {
       ) : (
         <Button
           {...props}
-          icon={icon || iconLeft}
+          icon={iconNode || iconNodeLeft}
           danger={false}
           onClick={onClick}
         >
           {label}
-          {iconRight}
+          {iconNodeRight}
         </Button>
       )}
     </Fragment>

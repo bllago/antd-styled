@@ -2,7 +2,7 @@ const theme = {}
 
 theme.breakpoints = ['576px', '768px', '1024px', '1200px', '1600px']
 theme.grid = {}
-theme.grid.gutters = { xs: 16, sm: 32, md: 48, lg: 48, xl: 80, xxl: 96 }
+theme.grid.gutters = { xs: 8, sm: 16, md: 16, lg: 24, xl: 24, xxl: 40 }
 theme.grid.paddings = [
   theme.grid.gutters.xs/2,
   theme.grid.gutters.sm/2,
