@@ -14,7 +14,7 @@ import {
 const List = (props) => {
   const {
     items,
-    listItem,
+    renderItem,
     horizontal,
     grid,
     columns,
@@ -51,10 +51,10 @@ const List = (props) => {
     items.map((item) =>
       grid && !horizontal ? (
         <Col key={item.id} {...colProps} display='flex' flexDirection='column'>
-          {React.cloneElement(listItem, { data: item })}
+          {renderItem(item)}
         </Col>
       ) : (
-        React.cloneElement(listItem, { data: item })
+        renderItem(item)
       )
     )
 

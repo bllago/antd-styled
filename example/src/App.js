@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Layout, Header, Content, PageWrapper, List, Card, ClinicCreate, MainSimpleView } from 'antd-plus'
-import { Button } from 'antd'
+import { Button, Input, Form } from 'antd'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
 
-const Item = (props) => {
-  return <Card mb={24}>{props.data.itemName}</Card>
+const Item = (item) => {
+  return <Card mb={24}>{item.itemName}</Card>
 }
 
 const items = [
@@ -68,17 +68,22 @@ const App = () => {
             title: "Clinic members",
             subTitle: "Welcome your teammates! :)"
           }}>
-            {/* <List
+            <List
               items={items}
-              listItem={<Item />}
+              renderItem={Item}
               isListHeader
               headerPositioningProps={{ justifyContent: 'space-between' }}
               titleProps={{ level: 4 }}
               title="Title"
               action={<ClinicCreate popover popoverContent={<Input autoFocus />} popoverTrigger="click" label="Create"icon />}
-            /> */}
+            />
             {/* <MainSimpleView form={state.view} /> */}
-            {/* <Button onClick={toggleView}>Toggle</Button> */}
+            {/* <Form>
+              <Form.Item>
+              <Input />
+              </Form.Item>
+            </Form>
+            <Button >Toggle</Button> */}
         </PageWrapper>
         </Content>
       </Layout>
