@@ -8,8 +8,8 @@ const Image = styled('img')(compose(position, layout))
 const Img = (props) => <Image {...props} />
 
 Img.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired
+  src: PropTypes.string,
+  alt: PropTypes.string
 }
 
 export default Img

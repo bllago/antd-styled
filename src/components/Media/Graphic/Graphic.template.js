@@ -38,8 +38,8 @@ const Graphic = (props) => {
 }
 
 Graphic.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  src: PropTypes.string,
+  alt: PropTypes.string,
   hidden: PropTypes.string,
   animation: PropTypes.string,
   width: PropTypes.string,

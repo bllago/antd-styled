@@ -11,9 +11,10 @@ import {
   color
 } from 'styled-system'
 
-const StyledAntRow = styled(AntRow)(
-  compose(layout, flexbox, background, color, space)
-)
+const StyledAntRow = styled(AntRow).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    !['alignItems', 'justifyContent'].includes(prop)
+})(compose(layout, flexbox, background, color, space))
 
 const Row = (props) => {
   const theme = useContext(ThemeContext)
