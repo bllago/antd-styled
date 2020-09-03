@@ -1,27 +1,27 @@
 import React from 'react'
-import { Layout, Header, Content, PageWrapper, List, Card, ClinicRemove } from 'antd-plus'
+import { Layout, Header, Content, PageWrapper, SimpleList, Skeleton } from 'antd-plus'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
 
-const Item = (item) => {
-  return <Card>{item.itemName}</Card>
-}
+// const Item = (item) => {
+//   return <Card>{item.itemName}</Card>
+// }
 
-const items = [
-  {
-    itemName: 'Trond Klæboe'
-  },
-  {
-    itemName: 'Oleksiy Pastukhov'
-  },
-  {
-    itemName: 'Ruslan Khorin'
-  },
-  {
-    itemName: 'Evgeniy Bogdanov'
-  }
-]
+// const items = [
+//   {
+//     itemName: 'Trond Klæboe'
+//   },
+//   {
+//     itemName: 'Oleksiy Pastukhov'
+//   },
+//   {
+//     itemName: 'Ruslan Khorin'
+//   },
+//   {
+//     itemName: 'Evgeniy Bogdanov'
+//   }
+// ]
 
 const App = () => {
   return (
@@ -35,15 +35,8 @@ const App = () => {
             title: "Clinic members",
             subTitle: "Welcome your teammates! :)"
           }}>
-            <List
-              items={items}
-              renderItem={Item}
-              isListHeader
-              headerPositioningProps={{ justifyContent: 'space-between' }}
-              titleProps={{ level: 4 }}
-              title="Title"
-              action={<ClinicRemove label="Create" />}
-            />
+            <SimpleList />
+            <Skeleton active />
         </PageWrapper>
         </Content>
       </Layout>
