@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Row from '../../LayoutSystem/Row'
 import Col from '../../LayoutSystem/Col'
-import { Typography } from 'antd'
+import Skeleton from '../../Skeleton'
+import { Typography, Empty } from 'antd'
 
 import {
   HORIZONTAL_LAYOUT_PROPS,
@@ -29,7 +30,9 @@ const List = (props) => {
     isListHeader,
     headerPositioningProps,
     isListFooter,
-    footerPositioningProps
+    footerPositioningProps,
+    isLoaded,
+    isEmpty
   } = props
 
   const listLayoutProps =
@@ -71,7 +74,13 @@ const List = (props) => {
         </Row>
       )}
       <Row>
-        {grid && list}
+        {grid && (
+          <Fragment>
+            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 1 }} />}
+            {isLoaded && isEmpty && <Empty />}
+            {isLoaded && !isEmpty && list}
+          </Fragment>
+        )}
         {!grid && (
           <Col
             span={24}
@@ -79,7 +88,9 @@ const List = (props) => {
             {...scrollProps}
             maxHeight={maxHeight}
           >
-            {list}
+            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 1 }} />}
+            {isLoaded && isEmpty && <Empty />}
+            {isLoaded && !isEmpty && list}
           </Col>
         )}
       </Row>

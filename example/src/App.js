@@ -1,6 +1,5 @@
 import React from 'react'
-import { Layout, Header, Content, PageWrapper, SimpleList, Skeleton } from 'antd-plus'
-// import { Skeleton } from 'antd'
+import { Layout, Header, Content, PageWrapper, SimpleList } from 'antd-plus'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
@@ -37,7 +36,6 @@ const App = () => {
             subTitle: "Welcome your teammates! :)"
           }}>
             <SimpleList />
-            <Skeleton active />
         </PageWrapper>
         </Content>
       </Layout>
