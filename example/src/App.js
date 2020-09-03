@@ -36,7 +36,7 @@ const App = () => {
             subTitle: "Welcome your teammates! :)"
           }}>
             <SimpleList />
-            <Skeleton title={false} />
+            <Skeleton title={false} paragraph={{ rows: 1 }} />
         </PageWrapper>
         </Content>
       </Layout>

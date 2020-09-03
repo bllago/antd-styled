@@ -12,8 +12,6 @@ const StyledAntSkeleton = styled(AntSkeleton)`
 `
 
 const Skeleton = (props) => {
-  // const theme = useContext(ThemeContext)
-
   return <StyledAntSkeleton {...props} active />
 }
 
