@@ -77,9 +77,7 @@ const List = (props) => {
       <Row>
         {grid && (
           <Fragment>
-            {!isLoaded && !isEmpty && (
-              <Skeleton title={false} paragraph={{ rows: 1 }} />
-            )}
+            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
             {isLoaded && isEmpty && <Empty />}
             {isLoaded && !isEmpty && list}
           </Fragment>
@@ -91,9 +89,7 @@ const List = (props) => {
             {...scrollProps}
             maxHeight={maxHeight}
           >
-            {!isLoaded && !isEmpty && (
-              <Skeleton title={false} paragraph={{ rows: 5 }} />
-            )}
+            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
             {isLoaded && isEmpty && showEmpty && (
               <Empty description={false} image={Empty.PRESENTED_IMAGE_SIMPLE} />
             )}
