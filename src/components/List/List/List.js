@@ -88,7 +88,7 @@ const List = (props) => {
             {...scrollProps}
             maxHeight={maxHeight}
           >
-            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 1 }} />}
+            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
             {isLoaded && isEmpty && <Empty />}
             {isLoaded && !isEmpty && list}
           </Col>
