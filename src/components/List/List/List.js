@@ -32,7 +32,8 @@ const List = (props) => {
     isListFooter,
     footerPositioningProps,
     isLoaded,
-    isEmpty
+    isEmpty,
+    showEmpty
   } = props
 
   const listLayoutProps =
@@ -89,7 +90,9 @@ const List = (props) => {
             maxHeight={maxHeight}
           >
             {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
-            {isLoaded && isEmpty && <Empty />}
+            {isLoaded && isEmpty && showEmpty && (
+              <Empty description={false} image={Empty.PRESENTED_IMAGE_SIMPLE} />
+            )}
             {isLoaded && !isEmpty && list}
           </Col>
         )}
