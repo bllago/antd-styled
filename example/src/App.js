@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout, Header, Content, PageWrapper, SimpleList, Skeleton } from 'antd-plus'
+// import { Skeleton } from 'antd'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'

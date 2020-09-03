@@ -12,7 +12,7 @@ const Skeleton = (props) => {
       border-radius: ${theme.borderRadius.sm};
     }
   `
-  return <StyledAntSkeleton />
+  return <StyledAntSkeleton {...props} active />
 }
 
 export default Skeleton
