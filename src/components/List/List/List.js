@@ -77,7 +77,9 @@ const List = (props) => {
       <Row>
         {grid && (
           <Fragment>
-            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 1 }} />}
+            {!isLoaded && isEmpty && (
+              <Skeleton title={false} paragraph={{ rows: 1 }} />
+            )}
             {isLoaded && isEmpty && <Empty />}
             {isLoaded && !isEmpty && list}
           </Fragment>
