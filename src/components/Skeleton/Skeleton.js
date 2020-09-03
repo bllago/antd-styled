@@ -1,17 +1,19 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Skeleton as AntSkeleton } from 'antd'
-import styled, { ThemeContext } from 'styled-components'
+import styled from 'styled-components'
+
+const StyledAntSkeleton = styled(AntSkeleton)`
+  .ant-skeleton-content .ant-skeleton-title {
+    border-radius: ${(props) => props.theme.borderRadius.sm};
+  }
+  .ant-skeleton-content .ant-skeleton-paragraph > li {
+    border-radius: ${(props) => props.theme.borderRadius.sm};
+  }
+`
 
 const Skeleton = (props) => {
-  const theme = useContext(ThemeContext)
-  const StyledAntSkeleton = styled(AntSkeleton)`
-    .ant-skeleton-content .ant-skeleton-title {
-      border-radius: ${theme.borderRadius.sm};
-    }
-    .ant-skeleton-content .ant-skeleton-paragraph > li {
-      border-radius: ${theme.borderRadius.sm};
-    }
-  `
+  // const theme = useContext(ThemeContext)
+
   return <StyledAntSkeleton {...props} active />
 }
 

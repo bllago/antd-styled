@@ -3,9 +3,9 @@ import { Layout } from 'antd'
 import styled from 'styled-components'
 import { compose, layout, space, color, shadow } from 'styled-system'
 
-const StyledAntHeader = styled(Layout.Header)(
-  compose(layout, space, color, shadow)
-)
+const StyledAntHeader = styled(Layout.Header).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => !['boxShadow'].includes(prop)
+})(compose(layout, space, color, shadow))
 
 const Header = (props) => <StyledAntHeader {...props} />
 
