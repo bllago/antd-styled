@@ -28,7 +28,9 @@ const Edit = (props) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           {...tooltipProps}
-          placement={tooltipProps.placement || DEFAULT_PROPS.placement}
+          placement={
+            (tooltipProps && tooltipProps.placement) || DEFAULT_PROPS.placement
+          }
         >
           <Button
             {...props}
