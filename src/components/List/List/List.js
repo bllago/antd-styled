@@ -77,7 +77,9 @@ const List = (props) => {
       <Row>
         {grid && (
           <Fragment>
-            {!isLoaded && <Skeleton title={false} paragraph={{ rows: 5 }} />}
+            {!isLoaded && isEmpty && (
+              <Skeleton title={false} paragraph={{ rows: 5 }} />
+            )}
             {isLoaded && isEmpty && <Empty />}
             {isLoaded && !isEmpty && list}
           </Fragment>
@@ -111,41 +113,3 @@ List.propTypes = {
 }
 
 export default List
-
-// ——————————————————————————————————— Oleksiy version ——————————————————————————————————————————————————————————————
-
-// import React from 'react'
-// import PropTypes from 'prop-types'
-// import Row from '../../LayoutSystem/Row'
-// import Col from '../../LayoutSystem/Col'
-
-// const List = (props) => {
-//   const { items, listItem, columns } = props
-//   const isColumnsNumber = columns && typeof columns === 'number'
-//   const isColumnsObject = columns && typeof columns === 'object'
-//   const isGridLayout = isColumnsNumber || isColumnsObject
-//   const colProps = isColumnsNumber ? { span: 24 / columns } : columns
-//   const list =
-//     items &&
-//     items.map((item) =>
-//       isGridLayout ? (
-//         <Col key={item.id} {...colProps}>
-//           {React.cloneElement(listItem, { data: item })}
-//         </Col>
-//       ) : (
-//         React.cloneElement(listItem, { data: item })
-//       )
-//     )
-//   return (
-//     <Row>
-//       {isGridLayout && list}
-//       {!isGridLayout && <Col span={24}>{list}</Col>}
-//     </Row>
-//   )
-// }
-
-// List.propTypes = {
-//   title: PropTypes.string
-// }
-
-// export default List

@@ -1,27 +1,32 @@
 import React from 'react'
-import { Layout, Header, Content, PageWrapper, SimpleList, Skeleton } from 'antd-plus'
+import { Layout, Header, Content, PageWrapper, List, TextArea } from 'antd-plus'
+import { Button, Card } from 'antd'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
 
-// const Item = (item) => {
-//   return <Card>{item.itemName}</Card>
-// }
-
-// const items = [
-//   {
-//     itemName: 'Trond Klæboe'
-//   },
-//   {
-//     itemName: 'Oleksiy Pastukhov'
-//   },
-//   {
-//     itemName: 'Ruslan Khorin'
-//   },
-//   {
-//     itemName: 'Evgeniy Bogdanov'
-//   }
-// ]
+const items = [
+  {
+    itemName: 'Trond Klæboe',
+    id: '1'
+  },
+  {
+    itemName: 'Oleksiy Pastukhov',
+    id: '2'
+  },
+  {
+    itemName: 'Ruslan Khorin',
+    id: '3'
+  },
+  {
+    itemName: 'Evgeniy Bogdanov',
+    id: '4'
+  }
+]
+const Item = (props) => {
+  const { item } = props
+  return (<Card mb={24}>{item.itemName}</Card>)
+}
 
 const App = () => {
   return (
@@ -35,8 +40,19 @@ const App = () => {
             title: "Clinic members",
             subTitle: "Welcome your teammates! :)"
           }}>
-            <SimpleList />
-            <Skeleton title={false} paragraph={{ rows: 1 }} />
+            <List
+              isLoaded
+              isEmpty={false}
+              items={items}
+              renderItem={(item) => <Item key={item.id} item={item} />}
+              isListFooter
+              action={
+                <Button key='button' type="primary" size="large" block>Next step</Button>
+              }
+              footerActionWidthProps={{ xs: 12 }}
+              footerPositioningProps={{ justifyContent: 'center' }}
+            />
+            <TextArea size="large" />
         </PageWrapper>
         </Content>
       </Layout>

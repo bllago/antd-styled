@@ -1,6 +1,6 @@
 {
   "name": "antd-styled",
-  "version": "1.1.13",
+  "version": "1.1.15",
   "description": "AntdD + styled system. Extended antd components with additional style properties",
   "author": "alexpassss",
   "license": "MIT",
@@ -65,6 +65,7 @@
     "dist"
   ],
   "dependencies": {
-    "@styled-system/should-forward-prop": "^5.1.5"
+    "@styled-system/should-forward-prop": "^5.1.5",
+    "rc-queue-anim": "^1.8.5"
   }
 }
