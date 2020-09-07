@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Header, Content, PageWrapper, List, TextArea } from 'antd-plus'
+import { Layout, Header, Content, PageWrapper, List, TextArea, Edit } from 'antd-plus'
 import { Button, Card } from 'antd'
 import { ThemeProvider } from 'styled-components'
 
@@ -53,6 +53,7 @@ const App = () => {
               footerPositioningProps={{ justifyContent: 'center' }}
             />
             <TextArea size="large" />
+            <Edit text='edit' />
         </PageWrapper>
         </Content>
       </Layout>

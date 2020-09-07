@@ -4,12 +4,7 @@ import { Button, Typography, Tooltip, Popconfirm } from 'antd'
 import { DeleteFilled } from '@ant-design/icons'
 
 const DEFAULT_PROPS = {
-  type: 'primary',
-  question: 'Remove clinic',
-  confirmLabel: 'Yes, remove it',
-  cancelLabel: 'No, keep it',
-  tooltipLabel: 'Remove clinic',
-  tooltipPlacement: 'bottom'
+  placement: 'bottom'
 }
 
 const ClinicRemove = (props) => {
@@ -63,7 +58,7 @@ const ClinicRemove = (props) => {
       {!label && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           {...tooltipProps}
-          placement={tooltipProps.placement || DEFAULT_PROPS.tooltipPlacement}
+          placement={tooltipProps.placement || DEFAULT_PROPS.placement}
         >
           <Button
             {...props}

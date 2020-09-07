@@ -4,7 +4,7 @@ import { Button, Tooltip } from 'antd'
 import { SaveFilled } from '@ant-design/icons'
 
 const DEFAULT_PROPS = {
-  tooltipPlacement: 'bottom'
+  placement: 'bottom'
 }
 
 const Save = (props) => {
@@ -29,7 +29,7 @@ const Save = (props) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           {...tooltipProps}
-          placement={tooltipProps.placement || DEFAULT_PROPS.tooltipPlacement}
+          placement={tooltipProps.placement || DEFAULT_PROPS.placement}
         >
           <Button
             {...props}

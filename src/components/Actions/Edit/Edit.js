@@ -4,7 +4,7 @@ import { Button, Tooltip } from 'antd'
 import { EditFilled } from '@ant-design/icons'
 
 const DEFAULT_PROPS = {
-  tooltipPlacement: 'bottom'
+  placement: 'bottom'
 }
 
 const Edit = (props) => {
@@ -28,7 +28,7 @@ const Edit = (props) => {
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
           {...tooltipProps}
-          placement={tooltipProps.placement || DEFAULT_PROPS.tooltipPlacement}
+          placement={tooltipProps.placement || DEFAULT_PROPS.placement}
         >
           <Button
             {...props}
