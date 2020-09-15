@@ -3,8 +3,8 @@ import { Card as AntCard } from 'antd'
 import styled from 'styled-components'
 import { compose, shadow, space } from 'styled-system'
 
-const StyledAntCol = styled(AntCard)(compose(shadow, space))
+const StyledAntCard = styled(AntCard)(compose(shadow, space))
 
-const Card = (props) => <StyledAntCol {...props} />
+const Card = (props) => <StyledAntCard {...props} />
 
 export default Card
