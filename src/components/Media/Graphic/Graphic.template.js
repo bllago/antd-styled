@@ -30,8 +30,8 @@ const Graphic = (props) => {
         position={position || DEFAULT_PROPS.position}
         top={top}
         bottom={bottom || DEFAULT_PROPS.bottom}
-        left={left}
-        right={right || DEFAULT_PROPS.right}
+        left={left || DEFAULT_PROPS.left}
+        right={right}
       />
     </Box>
   )
