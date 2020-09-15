@@ -4,7 +4,7 @@ const DEFAULT_PROPS = {
   height: '30%',
   position: 'fixed',
   bottom: '50px',
-  right: '100px'
+  left: '72%'
 }
 
 export default DEFAULT_PROPS
