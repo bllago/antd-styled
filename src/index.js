@@ -20,7 +20,6 @@ import SelectableItem from './components/Items/SelectableItem'
 import Edit from './components/Actions/Edit'
 import Remove from './components/Actions/Remove'
 import Save from './components/Actions/Save'
-import Popover from './components/Popover'
 
 export {
   Layout,
@@ -44,8 +43,7 @@ export {
   SelectableItem,
   Edit,
   Remove,
-  Save,
-  Popover
+  Save
 }
 
 export default {
@@ -70,6 +68,5 @@ export default {
   SelectableItem,
   Edit,
   Remove,
-  Save,
-  Popover
+  Save
 }

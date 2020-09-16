@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout, Header, Content, PageWrapper, List, TextArea, Edit } from 'antd-plus'
-import { Button, Card } from 'antd'
+import { Layout, Header, Content, PageWrapper, List, TextArea, Edit, Card } from 'antd-plus'
+import { Button } from 'antd'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
@@ -52,8 +52,10 @@ const App = () => {
               footerActionWidthProps={{ xs: 12 }}
               footerPositioningProps={{ justifyContent: 'center' }}
             />
-            <TextArea size="large" />
-            <Edit text='edit' />
+            <Card>
+              <TextArea size="large" />
+              <Edit text='edit' />
+            </Card>
         </PageWrapper>
         </Content>
       </Layout>
