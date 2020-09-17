@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Header, Content, PageWrapper, List, TextArea, Edit, Card } from 'antd-plus'
+import { Layout, Header, Content, PageWrapper, List, TextArea, Edit, Card, Popover, Box, Paragraph } from 'antd-plus'
 import { Button } from 'antd'
 import { ThemeProvider } from 'styled-components'
 
@@ -52,10 +52,10 @@ const App = () => {
               footerActionWidthProps={{ xs: 12 }}
               footerPositioningProps={{ justifyContent: 'center' }}
             />
-            <Card>
-              <TextArea size="large" />
+            <Popover trigger="click" content={<Box py={1}><TextArea size="large" /></Box>}>
               <Edit text='edit' />
-            </Card>
+            </Popover>
+            <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
         </PageWrapper>
         </Content>
       </Layout>

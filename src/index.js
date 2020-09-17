@@ -21,6 +21,7 @@ import Edit from './components/Actions/Edit'
 import Remove from './components/Actions/Remove'
 import Save from './components/Actions/Save'
 import Popover from './components/Popover'
+import Paragraph from './components/Typography/Paragraph'
 
 export {
   Layout,
@@ -45,7 +46,8 @@ export {
   Edit,
   Remove,
   Save,
-  Popover
+  Popover,
+  Paragraph
 }
 
 export default {
@@ -71,5 +73,6 @@ export default {
   Edit,
   Remove,
   Save,
-  Popover
+  Popover,
+  Paragraph
 }
