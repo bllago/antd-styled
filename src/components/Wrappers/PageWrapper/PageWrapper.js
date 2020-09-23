@@ -10,6 +10,7 @@ const PageWrapper = (props) => {
     children,
     contentWidth,
     graphicProps,
+    headingHidden,
     headingProps,
     alignMiddle,
     height
@@ -22,7 +23,9 @@ const PageWrapper = (props) => {
       contentWidth={contentWidth}
     >
       <Graphic {...graphicProps} />
-      <ContentWrapper headingProps={headingProps}>{children}</ContentWrapper>
+      <ContentWrapper headingHidden={headingHidden} headingProps={headingProps}>
+        {children}
+      </ContentWrapper>
     </PositioningWrapper>
   )
 }
@@ -33,6 +36,7 @@ PageWrapper.propTypes = {
   alignMiddle: PropTypes.bool,
   contentWidth: PropTypes.object,
   graphicProps: PropTypes.object,
+  headingHidden: PropTypes.bool,
   headingProps: PropTypes.object
 }
 
