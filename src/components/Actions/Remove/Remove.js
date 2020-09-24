@@ -10,6 +10,7 @@ const DEFAULT_PROPS = {
 const ClinicRemove = (props) => {
   const {
     label,
+    popconfirmPlacement,
     type,
     shape,
     icon,
@@ -54,6 +55,7 @@ const ClinicRemove = (props) => {
           ? `No, keep ${itemName}`
           : DEFAULT_PROPS.cancelLabel
       }
+      placement={popconfirmPlacement}
     >
       {!label && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
@@ -86,6 +88,7 @@ const ClinicRemove = (props) => {
 
 ClinicRemove.propTypes = {
   label: PropTypes.string,
+  popconfirmPlacement: PropTypes.string,
   type: PropTypes.string,
   shape: PropTypes.string,
   // icon: PropTypes.node,

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import PositioningWrapper from '../PositioningWrapper'
 import ContentWrapper from '../ContentWrapper'
 import Graphic from '../../Media/Graphic'
