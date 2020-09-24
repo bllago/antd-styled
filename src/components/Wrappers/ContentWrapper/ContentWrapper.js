@@ -5,12 +5,18 @@ import Col from '../../LayoutSystem/Col'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
 
 const ContentWrapper = (props) => {
-  const { headingHidden, headingProps, children } = props
+  const { headingHidden, headingProps, children, action } = props
+
   return (
     <Row>
       {!headingHidden && (
         <Col xs={24}>
-          <HeadingPrimary {...headingProps} />
+          <Row alignItems='center'>
+            <Col flex='auto'>
+              <HeadingPrimary {...headingProps} />
+            </Col>
+            <Col>{action}</Col>
+          </Row>
         </Col>
       )}
       <Col xs={24}>{children}</Col>
@@ -21,7 +27,8 @@ const ContentWrapper = (props) => {
 ContentWrapper.propTypes = {
   children: PropTypes.node,
   headingHidden: PropTypes.bool,
-  headingProps: PropTypes.object.isRequired
+  headingProps: PropTypes.object.isRequired,
+  action: PropTypes.node
 }
 
 export default ContentWrapper
