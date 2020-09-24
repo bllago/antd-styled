@@ -9,7 +9,7 @@ const PageWrapper = (props) => {
     children,
     contentWidth,
     graphicProps,
-    headingHidden,
+    firstLevelHidden,
     headingProps,
     alignMiddle,
     height,
@@ -24,7 +24,7 @@ const PageWrapper = (props) => {
     >
       <Graphic {...graphicProps} />
       <ContentWrapper
-        headingHidden={headingHidden}
+        firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         action={action}
       >
@@ -40,7 +40,7 @@ PageWrapper.propTypes = {
   alignMiddle: PropTypes.bool,
   contentWidth: PropTypes.object,
   graphicProps: PropTypes.object,
-  headingHidden: PropTypes.bool,
+  firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object,
   action: PropTypes.node
 }
