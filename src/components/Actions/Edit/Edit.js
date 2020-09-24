@@ -15,7 +15,8 @@ const Edit = (props) => {
     iconRight,
     onClick,
     shape,
-    tooltipProps
+    tooltip,
+    tooltipPlacement
   } = props
 
   const iconNode = typeof icon === 'boolean' ? <EditFilled /> : icon
@@ -27,9 +28,9 @@ const Edit = (props) => {
     <Fragment>
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
-          {...tooltipProps}
+          title={tooltip}
           placement={
-            (tooltipProps && tooltipProps.placement) || DEFAULT_PROPS.placement
+            (tooltipPlacement && tooltipPlacement) || DEFAULT_PROPS.placement
           }
         >
           <Button

@@ -20,7 +20,8 @@ const ClinicRemove = (props) => {
     confirmLabel,
     onCancel,
     cancelLabel,
-    tooltipProps,
+    tooltip,
+    tooltipPlacement,
     question,
     itemName
   } = props
@@ -59,9 +60,9 @@ const ClinicRemove = (props) => {
     >
       {!label && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
-          {...tooltipProps}
+          title={tooltip}
           placement={
-            (tooltipProps && tooltipProps.placement) || DEFAULT_PROPS.placement
+            (tooltipPlacement && tooltipPlacement) || DEFAULT_PROPS.placement
           }
         >
           <Button

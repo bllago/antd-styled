@@ -16,7 +16,8 @@ const Save = (props) => {
     iconRight,
     onClick,
     shape,
-    tooltipProps
+    tooltip,
+    tooltipPlacement
   } = props
 
   const iconNode = typeof icon === 'boolean' ? <SaveFilled /> : icon
@@ -28,9 +29,9 @@ const Save = (props) => {
     <Fragment>
       {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
         <Tooltip
-          {...tooltipProps}
+          title={tooltip}
           placement={
-            (tooltipProps && tooltipProps.placement) || DEFAULT_PROPS.placement
+            (tooltipPlacement && tooltipPlacement) || DEFAULT_PROPS.placement
           }
         >
           <Button
@@ -65,7 +66,8 @@ Save.propTypes = {
   iconRight: PropTypes.node,
   onClick: PropTypes.func,
   shape: PropTypes.string,
-  tooltip: PropTypes.string
+  tooltip: PropTypes.string,
+  tooltipPlacement: PropTypes.string
 }
 
 export default Save
