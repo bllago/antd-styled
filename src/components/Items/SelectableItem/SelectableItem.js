@@ -32,7 +32,7 @@ const SelectableItem = (props) => {
           onClick={() => toggle(item.id)}
         />
       </Col>
-      <Col flex='auto'>{children}</Col>
+      <Col flex='1 1 0'>{children}</Col>
     </Row>
   )
 }
