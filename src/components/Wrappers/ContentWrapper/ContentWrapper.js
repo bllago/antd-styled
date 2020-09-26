@@ -11,7 +11,7 @@ const ContentWrapper = (props) => {
     <Row>
       {!firstLevelHidden && (
         <Col xs={24} mb={24}>
-          <Row>
+          <Row alignItems='center'>
             <Col flex='auto'>
               <HeadingPrimary {...headingProps} />
             </Col>
