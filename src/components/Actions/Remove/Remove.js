@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Button, Typography, Tooltip, Popconfirm } from 'antd'
-import { DeleteFilled } from '@ant-design/icons'
+import { DeleteOutlined } from '@ant-design/icons'
 
 const DEFAULT_PROPS = {
   placement: 'bottom'
@@ -26,11 +26,11 @@ const ClinicRemove = (props) => {
     itemName
   } = props
 
-  const iconNode = typeof icon === 'boolean' ? <DeleteFilled /> : icon
+  const iconNode = typeof icon === 'boolean' ? <DeleteOutlined /> : icon
   const iconNodeLeft =
-    typeof iconLeft === 'boolean' ? <DeleteFilled /> : iconLeft
+    typeof iconLeft === 'boolean' ? <DeleteOutlined /> : iconLeft
   const iconNodeRight =
-    typeof iconRight === 'boolean' ? <DeleteFilled /> : iconRight
+    typeof iconRight === 'boolean' ? <DeleteOutlined /> : iconRight
 
   return (
     <Popconfirm

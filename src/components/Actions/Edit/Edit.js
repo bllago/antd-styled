@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Button, Tooltip } from 'antd'
-import { EditFilled } from '@ant-design/icons'
+import { EditOutlined } from '@ant-design/icons'
 
 const DEFAULT_PROPS = {
   placement: 'bottom'
@@ -19,10 +19,11 @@ const Edit = (props) => {
     tooltipPlacement
   } = props
 
-  const iconNode = typeof icon === 'boolean' ? <EditFilled /> : icon
-  const iconNodeLeft = typeof iconLeft === 'boolean' ? <EditFilled /> : iconLeft
+  const iconNode = typeof icon === 'boolean' ? <EditOutlined /> : icon
+  const iconNodeLeft =
+    typeof iconLeft === 'boolean' ? <EditOutlined /> : iconLeft
   const iconNodeRight =
-    typeof iconRight === 'boolean' ? <EditFilled /> : iconRight
+    typeof iconRight === 'boolean' ? <EditOutlined /> : iconRight
 
   return (
     <Fragment>
