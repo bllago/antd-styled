@@ -32,6 +32,7 @@ const PageWrapper = (props) => {
       <ContentWrapper
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
+        alignMiddle={alignMiddle}
         action={action}
         onBack={!alignMiddle && onBack}
         backBtnProps={backBtnProps}

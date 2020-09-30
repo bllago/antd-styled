@@ -9,6 +9,7 @@ const ContentWrapper = (props) => {
   const {
     firstLevelHidden,
     headingProps,
+    alignMiddle,
     children,
     action,
     onBack,
@@ -32,7 +33,9 @@ const ContentWrapper = (props) => {
               display='flex'
               flex='1 1 auto'
               alignItems={!headingProps.subTitle ? 'center' : 'flex-start'}
-              justifyContent={onBack || action ? 'flex-start' : 'center'}
+              justifyContent={
+                onBack || action || !alignMiddle ? 'flex-start' : 'center'
+              }
             >
               {onBack && (
                 <Back
@@ -59,7 +62,8 @@ ContentWrapper.propTypes = {
   action: PropTypes.node,
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
-  divided: PropTypes.bool
+  divided: PropTypes.bool,
+  alignMiddle: PropTypes.bool
 }
 
 export default ContentWrapper
