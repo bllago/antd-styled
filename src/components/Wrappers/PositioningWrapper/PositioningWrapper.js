@@ -36,7 +36,7 @@ const PositioningWrapper = (props) => {
     <Row height={height} {...positioningProps}>
       {onBack && (
         <Col xs={24} mb={[2, 2, 2, 0, 0, 0]}>
-          <Back onBack={onBack} {...backBtnProps} divided={divided} />
+          <Back onClick={onBack} {...backBtnProps} divided={divided} />
         </Col>
       )}
       <Col {...columnProps}>{children}</Col>
