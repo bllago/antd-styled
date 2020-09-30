@@ -16,7 +16,8 @@ const PageWrapper = (props) => {
     action,
     onBack,
     backBtnProps,
-    backBtnPositionProps
+    backBtnPositionProps,
+    divided
   } = props
 
   return (
@@ -33,6 +34,7 @@ const PageWrapper = (props) => {
         onBack={onBack}
         backBtnProps={backBtnProps}
         backBtnPositionProps={backBtnPositionProps}
+        divided={divided}
       >
         {children}
       </ContentWrapper>
@@ -49,8 +51,10 @@ PageWrapper.propTypes = {
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object,
   action: PropTypes.node,
-  isBack: PropTypes.bool,
-  onBack: PropTypes.func
+  onBack: PropTypes.func,
+  backBtnProps: PropTypes.object,
+  backBtnPositionProps: PropTypes.object,
+  divided: PropTypes.bool
 }
 
 export default PageWrapper

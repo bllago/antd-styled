@@ -15,7 +15,8 @@ const ContentWrapper = (props) => {
     action,
     onBack,
     backBtnProps,
-    backBtnPositionProps
+    backBtnPositionProps,
+    divided
   } = props
 
   return (
@@ -35,6 +36,7 @@ const ContentWrapper = (props) => {
                   type='text'
                   icon={<ArrowLeftOutlined />}
                   onClick={onBack}
+                  divided={divided !== undefined ? divided : true}
                 />
               )}
               <HeadingPrimary {...headingProps} />
@@ -53,8 +55,10 @@ ContentWrapper.propTypes = {
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object.isRequired,
   action: PropTypes.node,
-  isBack: PropTypes.bool,
-  onBack: PropTypes.func
+  onBack: PropTypes.func,
+  backBtnProps: PropTypes.object,
+  backBtnPositionProps: PropTypes.object,
+  divided: PropTypes.bool
 }
 
 export default ContentWrapper
