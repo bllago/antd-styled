@@ -17,11 +17,13 @@ import List from './components/List/List'
 import Skeleton from './components/Skeleton'
 import TextArea from './components/Inputs/TextArea'
 import SelectableItem from './components/Items/SelectableItem'
+import Back from './components/Actions/Back'
 import Edit from './components/Actions/Edit'
 import Remove from './components/Actions/Remove'
 import Save from './components/Actions/Save'
 import Popover from './components/Popover'
 import Paragraph from './components/Typography/Paragraph'
+import Divider from './components/Divider'
 
 export {
   Layout,
@@ -43,11 +45,13 @@ export {
   Skeleton,
   TextArea,
   SelectableItem,
+  Back,
   Edit,
   Remove,
   Save,
   Popover,
-  Paragraph
+  Paragraph,
+  Divider
 }
 
 export default {
@@ -70,9 +74,11 @@ export default {
   Skeleton,
   TextArea,
   SelectableItem,
+  Back,
   Edit,
   Remove,
   Save,
   Popover,
-  Paragraph
+  Paragraph,
+  Divider
 }

@@ -13,7 +13,10 @@ const PageWrapper = (props) => {
     headingProps,
     alignMiddle,
     height,
-    action
+    action,
+    isBack,
+    onBack,
+    backBtnProps
   } = props
 
   return (
@@ -27,6 +30,9 @@ const PageWrapper = (props) => {
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         action={action}
+        isBack={isBack}
+        onBack={onBack}
+        backBtnProps={backBtnProps}
       >
         {children}
       </ContentWrapper>
@@ -42,7 +48,9 @@ PageWrapper.propTypes = {
   graphicProps: PropTypes.object,
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object,
-  action: PropTypes.node
+  action: PropTypes.node,
+  isBack: PropTypes.bool,
+  onBack: PropTypes.func
 }
 
 export default PageWrapper

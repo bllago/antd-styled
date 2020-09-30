@@ -35,11 +35,18 @@ const App = () => {
         <Header px={theme.grid.paddings} color="#fff">Header</Header>
         <Content px={theme.grid.paddings}>
         <PageWrapper
-          headingHidden
           headingProps={{
             title: "Clinic members",
-            subTitle: "Welcome your teammates! :)"
-          }}>
+            titleLevel: 2,
+            align: 'left'
+            // subTitle: "Welcome your teammates! :)"
+          }}
+          isBack
+          onBack
+          backBtnProps={{
+            shape: 'default'
+          }}
+          >
             <List
               isLoaded
               isEmpty={false}
