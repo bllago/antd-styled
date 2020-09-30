@@ -13,9 +13,9 @@ const ContentWrapper = (props) => {
     headingProps,
     children,
     action,
-    isBack,
     onBack,
-    backBtnProps
+    backBtnProps,
+    backBtnPositionProps
   } = props
 
   return (
@@ -23,8 +23,13 @@ const ContentWrapper = (props) => {
       {!firstLevelHidden && (
         <Col xs={24} mb={24}>
           <Row alignItems='center'>
-            <Col display='flex' flex='auto' alignItems='center'>
-              {isBack && (
+            <Col
+              {...backBtnPositionProps}
+              display='flex'
+              flex='auto'
+              alignItems='center'
+            >
+              {onBack && (
                 <Back
                   {...backBtnProps}
                   type='text'

@@ -14,9 +14,9 @@ const PageWrapper = (props) => {
     alignMiddle,
     height,
     action,
-    isBack,
     onBack,
-    backBtnProps
+    backBtnProps,
+    backBtnPositionProps
   } = props
 
   return (
@@ -30,9 +30,9 @@ const PageWrapper = (props) => {
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         action={action}
-        isBack={isBack}
         onBack={onBack}
         backBtnProps={backBtnProps}
+        backBtnPositionProps={backBtnPositionProps}
       >
         {children}
       </ContentWrapper>
