@@ -4,8 +4,6 @@ import Row from '../../LayoutSystem/Row'
 import Col from '../../LayoutSystem/Col'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
 import Back from '../../Actions/Back'
-// import { Button, Divider } from 'antd'
-import { ArrowLeftOutlined } from '@ant-design/icons'
 
 const ContentWrapper = (props) => {
   const {
@@ -15,33 +13,36 @@ const ContentWrapper = (props) => {
     action,
     onBack,
     backBtnProps,
-    backBtnPositionProps,
     divided
   } = props
+
+  const DEFAULT_PROPS = {
+    marginBottom: 48
+  }
 
   return (
     <Row>
       {!firstLevelHidden && (
-        <Col xs={24} mb={24}>
-          <Row alignItems='center'>
+        <Col
+          xs={24}
+          mb={headingProps.marginBottom || DEFAULT_PROPS.marginBottom}
+        >
+          <Row alignItems={!headingProps.subTitle ? 'center' : 'flex-start'}>
             <Col
-              {...backBtnPositionProps}
               display='flex'
-              flex='auto'
-              alignItems='center'
+              flex='1 1 auto'
+              alignItems={!headingProps.subTitle ? 'center' : 'flex-start'}
             >
               {onBack && (
                 <Back
-                  {...backBtnProps}
-                  type='text'
-                  icon={<ArrowLeftOutlined />}
                   onClick={onBack}
+                  {...backBtnProps}
                   divided={divided !== undefined ? divided : true}
                 />
               )}
               <HeadingPrimary {...headingProps} />
             </Col>
-            <Col>{action}</Col>
+            {action && <Col>{action}</Col>}
           </Row>
         </Col>
       )}
@@ -57,7 +58,6 @@ ContentWrapper.propTypes = {
   action: PropTypes.node,
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
-  backBtnPositionProps: PropTypes.object,
   divided: PropTypes.bool
 }
 

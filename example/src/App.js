@@ -35,17 +35,15 @@ const App = () => {
         <Header px={theme.grid.paddings} color="#fff">Header</Header>
         <Content px={theme.grid.paddings}>
         <PageWrapper
+          // alignMiddle
           headingProps={{
             title: "Clinic members",
             titleLevel: 2,
-            align: 'left'
-            // subTitle: "Welcome your teammates! :)"
+            textAlign: 'left',
+            subTitle: "Welcome your teammates! :)"
           }}
-          isBack
           onBack
-          backBtnProps={{
-            shape: 'default'
-          }}
+          action={<Button type="primary" block>Action</Button>}
           >
             <List
               isLoaded
@@ -59,10 +57,6 @@ const App = () => {
               footerActionWidthProps={{ xs: 12 }}
               footerPositioningProps={{ justifyContent: 'center' }}
             />
-            <Popover trigger="click" content={<Box py={1}><TextArea size="large" /></Box>}>
-              <Edit text='edit' />
-            </Popover>
-            <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
         </PageWrapper>
         </Content>
       </Layout>

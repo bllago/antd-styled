@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Button, Tooltip } from 'antd'
 import Divider from '../../Divider'
+import Box from '../../Box'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 
 const DEFAULT_PROPS = {
@@ -15,22 +16,34 @@ const Back = (props) => {
     iconLeft,
     iconRight,
     onClick,
-    shape,
     tooltip,
     tooltipPlacement,
     divided
   } = props
 
-  const iconNode = typeof icon === 'boolean' ? <ArrowLeftOutlined /> : icon
+  const iconNode =
+    typeof icon === 'boolean' || typeof icon === 'undefined' ? (
+      <ArrowLeftOutlined />
+    ) : (
+      icon
+    )
   const iconNodeLeft =
-    typeof iconLeft === 'boolean' ? <ArrowLeftOutlined /> : iconLeft
+    typeof iconLeft === 'boolean' || typeof icon === 'undefined' ? (
+      <ArrowLeftOutlined />
+    ) : (
+      iconLeft
+    )
   const iconNodeRight =
     typeof iconRight === 'boolean' ? <ArrowLeftOutlined /> : iconRight
 
   return (
     <Fragment>
-      {!text && shape && (iconNode || iconNodeLeft || iconNodeRight) ? (
-        <Fragment>
+      {!text ? (
+        <Box
+          display='flex'
+          alignItems='center'
+          // alignSelf='flex-start'
+        >
           <Tooltip
             title={tooltip}
             placement={
@@ -38,29 +51,37 @@ const Back = (props) => {
             }
           >
             <Button
-              {...props}
+              onClick={onClick}
               type='text'
               icon={iconNode || iconNodeLeft || iconNodeRight}
+              {...props}
               danger={false}
-              onClick={onClick}
             />
           </Tooltip>
-          {!divided ? null : <Divider type='vertical' mr={3} />}
-        </Fragment>
+          {!divided ? null : (
+            <Divider type='vertical' mr={3} height={24} top='unset' />
+          )}
+        </Box>
       ) : (
-        <Fragment>
+        <Box
+          display='flex'
+          alignItems='center'
+          // alignSelf='flex-start'
+        >
           <Button
-            {...props}
+            onClick={onClick}
             type='text'
             icon={iconNode || iconNodeLeft}
+            {...props}
             danger={false}
-            onClick={onClick}
           >
             {text}
             {iconNodeRight}
           </Button>
-          {!divided ? null : <Divider type='vertical' mr={3} />}
-        </Fragment>
+          {!divided ? null : (
+            <Divider type='vertical' mr={3} height={24} top='unset' />
+          )}
+        </Box>
       )}
     </Fragment>
   )
@@ -72,7 +93,6 @@ Back.propTypes = {
   iconLeft: PropTypes.node,
   iconRight: PropTypes.node,
   onClick: PropTypes.func,
-  shape: PropTypes.string,
   tooltip: PropTypes.string,
   tooltipPlacement: PropTypes.string
 }

@@ -1,6 +1,6 @@
 const DEFAULT_PROPS = {
   textAlign: 'center',
-  marginBottom: 48,
+  // marginBottom: 48,
   titleMarginBottom: 3
 }
 

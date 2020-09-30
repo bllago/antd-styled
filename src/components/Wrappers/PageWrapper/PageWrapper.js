@@ -16,7 +16,6 @@ const PageWrapper = (props) => {
     action,
     onBack,
     backBtnProps,
-    backBtnPositionProps,
     divided
   } = props
 
@@ -25,16 +24,18 @@ const PageWrapper = (props) => {
       height={height}
       alignMiddle={alignMiddle}
       contentWidth={contentWidth}
+      onBack={alignMiddle && onBack}
+      backBtnProps={backBtnProps}
+      divided={divided !== undefined ? divided : true}
     >
       <Graphic {...graphicProps} />
       <ContentWrapper
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         action={action}
-        onBack={onBack}
+        onBack={!alignMiddle && onBack}
         backBtnProps={backBtnProps}
-        backBtnPositionProps={backBtnPositionProps}
-        divided={divided}
+        divided={divided !== undefined ? divided : true}
       >
         {children}
       </ContentWrapper>
@@ -53,7 +54,6 @@ PageWrapper.propTypes = {
   action: PropTypes.node,
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
-  backBtnPositionProps: PropTypes.object,
   divided: PropTypes.bool
 }
 
