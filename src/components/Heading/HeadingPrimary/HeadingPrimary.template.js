@@ -15,7 +15,7 @@ const HeadingPrimary = (props) => {
   } = props
 
   return (
-    <Box align={textAlign || DEFAULT_PROPS.textAlign}>
+    <Box textAlign={textAlign || DEFAULT_PROPS.textAlign}>
       <Box
         mb={subTitle && (titleMarginBottom || DEFAULT_PROPS.titleMarginBottom)}
       >
