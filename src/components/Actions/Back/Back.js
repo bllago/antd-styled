@@ -17,7 +17,8 @@ const Back = (props) => {
     onClick,
     shape,
     tooltip,
-    tooltipPlacement
+    tooltipPlacement,
+    divided
   } = props
 
   const iconNode = typeof icon === 'boolean' ? <ArrowLeftOutlined /> : icon
@@ -44,7 +45,7 @@ const Back = (props) => {
               onClick={onClick}
             />
           </Tooltip>
-          <Divider type='vertical' mr={3} />
+          {!divided ? null : <Divider type='vertical' mr={3} />}
         </Fragment>
       ) : (
         <Fragment>
@@ -58,7 +59,7 @@ const Back = (props) => {
             {text}
             {iconNodeRight}
           </Button>
-          <Divider type='vertical' mr={3} />
+          {!divided ? null : <Divider type='vertical' mr={3} />}
         </Fragment>
       )}
     </Fragment>
