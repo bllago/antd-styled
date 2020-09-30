@@ -32,6 +32,7 @@ const ContentWrapper = (props) => {
               display='flex'
               flex='1 1 auto'
               alignItems={!headingProps.subTitle ? 'center' : 'flex-start'}
+              justifyContent={onBack || action ? 'flex-start' : 'center'}
             >
               {onBack && (
                 <Back
