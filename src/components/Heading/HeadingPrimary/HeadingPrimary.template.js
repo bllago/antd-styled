@@ -5,14 +5,7 @@ import { Typography } from 'antd'
 import { DEFAULT_PROPS } from './constants'
 
 const HeadingPrimary = (props) => {
-  const {
-    title,
-    subTitle,
-    // marginBottom,
-    titleMarginBottom,
-    textAlign,
-    titleSize
-  } = props
+  const { title, subTitle, titleMarginBottom, textAlign, titleSize } = props
 
   return (
     <Box textAlign={textAlign || DEFAULT_PROPS.textAlign}>
@@ -32,7 +25,6 @@ HeadingPrimary.propTypes = {
   titleMarginBottom: PropTypes.number,
   subTitle: PropTypes.string,
   textAlign: PropTypes.string
-  // marginBottom: PropTypes.number
 }
 
 export default HeadingPrimary

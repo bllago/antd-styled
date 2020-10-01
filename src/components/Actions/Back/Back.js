@@ -39,11 +39,7 @@ const Back = (props) => {
   return (
     <Fragment>
       {!text ? (
-        <Box
-          display='flex'
-          alignItems='center'
-          // alignSelf='flex-start'
-        >
+        <Box display='flex' alignItems='center'>
           <Tooltip
             title={tooltip}
             placement={
