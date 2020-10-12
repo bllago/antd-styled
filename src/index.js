@@ -22,7 +22,10 @@ import Edit from './components/Actions/Edit'
 import Remove from './components/Actions/Remove'
 import Save from './components/Actions/Save'
 import Popover from './components/Popover'
+import Link from './components/Typography/Link'
 import Paragraph from './components/Typography/Paragraph'
+import Text from './components/Typography/Text'
+import Title from './components/Typography/Title'
 import Divider from './components/Divider'
 
 export {
@@ -50,7 +53,10 @@ export {
   Remove,
   Save,
   Popover,
+  Link,
   Paragraph,
+  Text,
+  Title,
   Divider
 }
 
@@ -79,6 +85,9 @@ export default {
   Remove,
   Save,
   Popover,
+  Link,
   Paragraph,
+  Text,
+  Title,
   Divider
 }
