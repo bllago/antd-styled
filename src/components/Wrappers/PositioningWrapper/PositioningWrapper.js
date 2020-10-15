@@ -20,7 +20,7 @@ const PositioningWrapper = (props) => {
   } = props
 
   const ALIGN_MIDDLE_PROPS = {
-    height: '100%',
+    // height: '100%',
     alignItems: onBack ? 'flex-start' : 'center',
     justifyContent: 'center'
   }
@@ -33,7 +33,13 @@ const PositioningWrapper = (props) => {
     : CONTENT_DEFAULT_WIDTH
 
   return (
-    <Row height={height} {...positioningProps}>
+    <Row
+      height={height}
+      // ————————————— Test props
+      flexGrow={1}
+      // ————————————— Test props
+      {...positioningProps}
+    >
       {onBack && (
         <Col xs={24} mb={[2, 2, 2, 0, 0, 0]}>
           <Back onClick={onBack} {...backBtnProps} divided={divided} />

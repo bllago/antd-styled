@@ -22,7 +22,12 @@ const ContentWrapper = (props) => {
   }
 
   return (
-    <Row>
+    <Row
+      // ————————————— Test props
+      minHeight='100%'
+      alignContent='flex-start'
+      // ————————————— Test props
+    >
       {!firstLevelHidden && (
         <Col
           xs={24}
