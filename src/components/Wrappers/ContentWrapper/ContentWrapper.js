@@ -68,6 +68,7 @@ const ContentWrapper = (props) => {
         xs={24}
         // ————————————— Test props
         display='flex'
+        flexDirection='column'
         flex={1}
         // ————————————— Test props
       >
