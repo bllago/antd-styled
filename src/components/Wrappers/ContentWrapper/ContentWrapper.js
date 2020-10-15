@@ -25,7 +25,7 @@ const ContentWrapper = (props) => {
     <Row
       // ————————————— Test props
       minHeight='100%'
-      alignContent='flex-start'
+      flexDirecrion='column'
       // ————————————— Test props
     >
       {!firstLevelHidden && (
@@ -64,7 +64,14 @@ const ContentWrapper = (props) => {
           </Row>
         </Col>
       )}
-      <Col xs={24}>{children}</Col>
+      <Col
+        xs={24}
+        // ————————————— Test props
+        flex={1}
+        // ————————————— Test props
+      >
+        {children}
+      </Col>
     </Row>
   )
 }
