@@ -25,7 +25,7 @@ const ContentWrapper = (props) => {
     <Row
       // ————————————— Test props
       minHeight='100%'
-      flexDirecrion='column'
+      flexDirection='column'
       // ————————————— Test props
     >
       {!firstLevelHidden && (
