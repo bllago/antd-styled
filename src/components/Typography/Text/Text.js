@@ -11,7 +11,8 @@ import {
   background,
   border,
   position,
-  shadow
+  shadow,
+  system
 } from 'styled-system'
 
 const StyledText = styled(AntTypography.Text)(
@@ -24,7 +25,8 @@ const StyledText = styled(AntTypography.Text)(
     background,
     border,
     position,
-    shadow
+    shadow,
+    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
   )
 )
 

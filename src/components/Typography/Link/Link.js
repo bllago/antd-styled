@@ -11,7 +11,8 @@ import {
   background,
   border,
   position,
-  shadow
+  shadow,
+  system
 } from 'styled-system'
 
 const StyledLink = styled(AntTypography.Link)(
@@ -24,7 +25,8 @@ const StyledLink = styled(AntTypography.Link)(
     background,
     border,
     position,
-    shadow
+    shadow,
+    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
   )
 )
 

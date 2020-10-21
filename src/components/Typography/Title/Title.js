@@ -11,7 +11,8 @@ import {
   background,
   border,
   position,
-  shadow
+  shadow,
+  system
 } from 'styled-system'
 
 const StyledTitle = styled(AntTypography.Title)(
@@ -24,7 +25,8 @@ const StyledTitle = styled(AntTypography.Title)(
     background,
     border,
     position,
-    shadow
+    shadow,
+    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
   )
 )
 

@@ -10,7 +10,8 @@ import {
   background,
   border,
   position,
-  shadow
+  shadow,
+  system
 } from 'styled-system'
 
 const StyledDiv = styled('div')(
@@ -23,7 +24,8 @@ const StyledDiv = styled('div')(
     background,
     border,
     position,
-    shadow
+    shadow,
+    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
   )
 )
 

@@ -4,17 +4,35 @@ import { Row as AntRow } from 'antd'
 
 import {
   compose,
-  layout,
   space,
+  color,
+  typography,
+  layout,
   flexbox,
   background,
-  color
+  border,
+  position,
+  shadow,
+  system
 } from 'styled-system'
 
 const StyledAntRow = styled(AntRow).withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     !['alignItems', 'justifyContent'].includes(prop)
-})(compose(layout, flexbox, background, color, space))
+})(
+  compose(
+    space,
+    color,
+    typography,
+    layout,
+    flexbox,
+    background,
+    border,
+    position,
+    shadow,
+    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
+  )
+)
 
 const Row = (props) => {
   const theme = useContext(ThemeContext)
