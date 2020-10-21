@@ -11,7 +11,8 @@ import {
   background,
   border,
   position,
-  shadow
+  shadow,
+  system
 } from 'styled-system'
 
 const StyledAntDivider = styled(AntDivider)(
@@ -24,7 +25,8 @@ const StyledAntDivider = styled(AntDivider)(
     background,
     border,
     position,
-    shadow
+    shadow,
+    system({ transform: true })
   )
 )
 

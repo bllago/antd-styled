@@ -25,7 +25,13 @@ const StyledDiv = styled('div')(
     border,
     position,
     shadow,
-    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
+    system({
+      whiteSpace: true,
+      cursor: true,
+      wordBreak: true,
+      zoom: true,
+      transform: true
+    })
   )
 )
 

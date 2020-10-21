@@ -1,9 +1,34 @@
 import React, { Fragment } from 'react'
 import { Input as AntInput } from 'antd'
 import styled from 'styled-components'
-import { compose, typography } from 'styled-system'
+import {
+  compose,
+  space,
+  color,
+  typography,
+  layout,
+  flexbox,
+  background,
+  border,
+  position,
+  shadow,
+  system
+} from 'styled-system'
 
-const StyledTextArea = styled(AntInput.TextArea)(compose(typography))
+const StyledTextArea = styled(AntInput.TextArea)(
+  compose(
+    typography,
+    space,
+    color,
+    layout,
+    flexbox,
+    background,
+    border,
+    position,
+    shadow,
+    system({ transform: true })
+  )
+)
 
 const TextArea = (props) => {
   return (

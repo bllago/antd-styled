@@ -26,7 +26,13 @@ const StyledText = styled(AntTypography.Text)(
     border,
     position,
     shadow,
-    system({ whiteSpace: true, cursor: true, wordBreak: true, zoom: true })
+    system({
+      whiteSpace: true,
+      cursor: true,
+      wordBreak: true,
+      zoom: true,
+      transform: true
+    })
   )
 )
 
