@@ -81,7 +81,7 @@ const Back = (props) => {
 
 Back.propTypes = {
   /**
-   * Use to add text label for button
+   * Use to add text label for button button
    */
   text: PropTypes.string,
   /**
