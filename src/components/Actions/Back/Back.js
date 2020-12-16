@@ -59,11 +59,7 @@ const Back = (props) => {
           )}
         </Box>
       ) : (
-        <Box
-          display='flex'
-          alignItems='center'
-          // alignSelf='flex-start'
-        >
+        <Box display='flex' alignItems='center'>
           <Button
             onClick={onClick}
             type='text'
@@ -84,13 +80,54 @@ const Back = (props) => {
 }
 
 Back.propTypes = {
-  label: PropTypes.string,
-  // icon: PropTypes.node,
+  /**
+   * Use to add text label for button
+   */
+  text: PropTypes.string,
+  /**
+   * Use to add icon at the left side inside button (shortcut, worked the same as property "iconLeft")
+   */
+  icon: PropTypes.node,
+  /**
+   * Use to add icon at the left side inside button (worked the same as property "icon")
+   */
   iconLeft: PropTypes.node,
+  /**
+   * Use to add icon at the right side inside button (worked the same as property "icon")
+   */
   iconRight: PropTypes.node,
+  /**
+   * Set the handler to handle click event
+   */
   onClick: PropTypes.func,
+  /**
+   * Use to enable tooltip and specify text for it
+   */
   tooltip: PropTypes.string,
-  tooltipPlacement: PropTypes.string
+  /**
+   * Use to specify tooltip position
+   */
+  tooltipPlacement: PropTypes.oneOf([
+    'top',
+    'right',
+    'bottom',
+    'left',
+    'topLeft',
+    'topRight',
+    'bottomLeft',
+    'bottomRight',
+    'leftTop',
+    'leftBottom',
+    'rightTop',
+    'rightBottom'
+  ]),
+  /**
+   * Use to enable divider at the right side from the button
+   */
+  divided: PropTypes.bool
+}
+Back.defaultProps = {
+  tooltipPlacement: 'topLeft'
 }
 
 export default Back
