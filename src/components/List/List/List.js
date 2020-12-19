@@ -5,6 +5,35 @@ import Col from '../../LayoutSystem/Col'
 import Skeleton from '../../Skeleton'
 import { Typography, Empty } from 'antd'
 
+/**
+ * List (19 Dec 2020)
+ *
+ * @since      0.0.1
+ *
+ * @param {array}          [items]                         DataSource array for list
+ * @param {node}           [renderItem]                    Use to specify item view.
+ * @param {boolean}        [horizontal]                    Use to enable horizontal view for list.
+ * @param {boolean}        [grid]                          Use to enable grid view for list.
+ * @param {oneOfType}      [columns]                       Use to specify amount of column for grid list.
+ * @param {boolean}        [scrollable]                    Use to make list scrollable.
+ * @param {oneOfType}      [maxHeight]                     Use to specify list max-height.
+ * @param {string}         [title]                         Use to add title text.
+ * @param {object}         [titleWidthProps]               Use to specify title width.
+ * @param {object}         [titleProps]                    Use to specify title props.
+ * @param {node}           [action]                        Use to add actions.
+ * @param {object}         [headerActionWidthProps]        Use to specify width for section with actions in header.
+ * @param {object}         [footerActionWidthProps]        Use to specify width for section with actions in footer.
+ * @param {boolean}        [isListHeader]                  Use to enable/disable header.
+ * @param {object}         [headerPositioningProps]        Use to specify header positioning.
+ * @param {boolean}        [isListFooter]                  Use to enable/disable footer.
+ * @param {object}         [footerPositioningProps]        Use to specify footer positioning.
+ * @param {boolean}        [isLoaded]                      Use to activate loading state (enabling skeleton).
+ * @param {boolean}        [isEmpty]                       Use to show empty list.
+ * @param {boolean}        [showEmpty]                     [FIXME] Very interesting property :)
+ *
+ * @return {ReactComponent}
+ */
+
 import {
   HORIZONTAL_LAYOUT_PROPS,
   DEFAULT_LAYOUT_PROPS,
@@ -77,7 +106,7 @@ const List = (props) => {
       <Row>
         {grid && (
           <Fragment>
-            {!isLoaded && isEmpty && (
+            {!isLoaded && !isEmpty && (
               <Skeleton title={false} paragraph={{ rows: 5 }} />
             )}
             {isLoaded && isEmpty && <Empty />}
@@ -109,7 +138,26 @@ const List = (props) => {
 }
 
 List.propTypes = {
-  title: PropTypes.string
+  items: PropTypes.array,
+  renderItem: PropTypes.node,
+  horizontal: PropTypes.bool,
+  grid: PropTypes.bool,
+  columns: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
+  scrollable: PropTypes.bool,
+  maxHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
+  titleWidthProps: PropTypes.object,
+  titleProps: PropTypes.object,
+  action: PropTypes.node,
+  headerActionWidthProps: PropTypes.object,
+  footerActionWidthProps: PropTypes.object,
+  isListHeader: PropTypes.bool,
+  headerPositioningProps: PropTypes.object,
+  isListFooter: PropTypes.bool,
+  footerPositioningProps: PropTypes.object,
+  isLoaded: PropTypes.bool,
+  isEmpty: PropTypes.bool,
+  showEmpty: PropTypes.bool
 }
 
 export default List

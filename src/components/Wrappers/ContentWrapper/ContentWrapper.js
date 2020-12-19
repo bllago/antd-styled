@@ -64,14 +64,7 @@ const ContentWrapper = (props) => {
           </Row>
         </Col>
       )}
-      <Col
-        xs={24}
-        // ————————————— Test props
-        display='flex'
-        flexDirection='column'
-        flex={1}
-        // ————————————— Test props
-      >
+      <Col xs={24} display='flex' flexDirection='column' flex={1}>
         {children}
       </Col>
     </Row>

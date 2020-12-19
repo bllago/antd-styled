@@ -5,8 +5,26 @@ import Divider from '../../Divider'
 import Box from '../../Box'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 
+/**
+ * Back button. (16 Dec 2020)
+ *
+ * @since      0.0.1
+ *
+ * @param {string}      [text]                Use to add text label for button button.
+ * @param {node}        [icon]                Use to add icon at the left side inside button (shortcut, worked the same as property "iconLeft").
+ * @param {node}        [iconLeft]            Use to add icon at the left side inside button (worked the same as property "icon").
+ * @param {node}        [iconRight]           Use to add icon at the right side inside button.
+ * @param {function}    [onClick]             Set the handler to handle click event.
+ * @param {string}      [tooltip]             Use to enable tooltip and specify text for it. Tooltip works ONLY when button without text.
+ * @param {oneOf}       [tooltipPlacement]    Use to specify tooltip position.
+ * @param {boolean}     [divided]             Use to enable divider at the right side of the button.
+ * @param {object}      [props]               Rest of the button properties are similar as in default AntD button (check Ant documentation: https://ant.design/components/button/).
+ *
+ * @return {ReactComponent}
+ */
+
 const DEFAULT_PROPS = {
-  placement: 'topLeft'
+  tooltipPlacement: 'topLeft'
 }
 
 const Back = (props) => {
@@ -42,9 +60,7 @@ const Back = (props) => {
         <Box display='flex' alignItems='center'>
           <Tooltip
             title={tooltip}
-            placement={
-              (tooltipPlacement && tooltipPlacement) || DEFAULT_PROPS.placement
-            }
+            placement={tooltipPlacement || DEFAULT_PROPS.tooltipPlacement}
           >
             <Button
               onClick={onClick}
@@ -80,33 +96,12 @@ const Back = (props) => {
 }
 
 Back.propTypes = {
-  /**
-   * Use to add text label for button button
-   */
   text: PropTypes.string,
-  /**
-   * Use to add icon at the left side inside button (shortcut, worked the same as property "iconLeft")
-   */
   icon: PropTypes.node,
-  /**
-   * Use to add icon at the left side inside button (worked the same as property "icon")
-   */
   iconLeft: PropTypes.node,
-  /**
-   * Use to add icon at the right side inside button (worked the same as property "icon")
-   */
   iconRight: PropTypes.node,
-  /**
-   * Set the handler to handle click event
-   */
   onClick: PropTypes.func,
-  /**
-   * Use to enable tooltip and specify text for it
-   */
   tooltip: PropTypes.string,
-  /**
-   * Use to specify tooltip position
-   */
   tooltipPlacement: PropTypes.oneOf([
     'top',
     'right',
@@ -121,13 +116,12 @@ Back.propTypes = {
     'rightTop',
     'rightBottom'
   ]),
-  /**
-   * Use to enable divider at the right side from the button
-   */
-  divided: PropTypes.bool
+  divided: PropTypes.bool,
+  props: PropTypes.object
 }
 Back.defaultProps = {
-  tooltipPlacement: 'topLeft'
+  tooltipPlacement: 'topLeft',
+  divided: false
 }
 
 export default Back

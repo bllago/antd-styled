@@ -1,8 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Row from '../../LayoutSystem/Row'
 import Col from '../../LayoutSystem/Col'
 import { Checkbox } from 'antd'
-import PropTypes from 'prop-types'
 
 /**
  * Advanced list component (6 Sep 2020)
