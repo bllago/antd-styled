@@ -10,6 +10,9 @@
 npm install --save antd-styled
 ```
 
+## StoryBook
+https://bllago.github.io/antd-styled/?path=/story/components-divider--template
+
 ## Usage
 
 ```jsx
