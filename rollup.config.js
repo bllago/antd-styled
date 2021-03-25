@@ -1,6 +1,7 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
+import scss from 'rollup-plugin-scss'
 
 import pkg from './package.json'
 
@@ -24,6 +25,7 @@ export default {
       exclude: 'node_modules/**',
       presets: ['@babel/env', '@babel/preset-react']
     }),
-    commonjs()
+    commonjs(),
+    scss()
   ]
 }
