@@ -37,7 +37,8 @@ import MenuItem from './components/Menus/MenuItem'
 import Badge from './components/Badge'
 import Notification from './components/Notification'
 import AppWrapper from './components/Wrappers/AppWrapper'
-import AppNavbar from './components/Wrappers/AppNavbar'
+import AppNavbarWrapper from './components/Wrappers/AppNavbarWrapper'
+import AppHeaderWrapper from './components/Wrappers/AppHeaderWrapper'
 
 export {
   Layout,
@@ -79,7 +80,8 @@ export {
   Badge,
   Notification,
   AppWrapper,
-  AppNavbar
+  AppNavbarWrapper,
+  AppHeaderWrapper
 }
 
 export default {
@@ -122,5 +124,6 @@ export default {
   Badge,
   Notification,
   AppWrapper,
-  AppNavbar
+  AppNavbarWrapper,
+  AppHeaderWrapper
 }

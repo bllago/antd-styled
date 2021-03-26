@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Row from '../../LayoutSystem/Row'
 import Col from '../../LayoutSystem/Col'
-import Box from '../../Box'
 import Back from '../../Actions/Back'
 import {
   CENTERED_CONTENT_DEFAULT_WIDTH,
@@ -21,6 +20,7 @@ const PositioningWrapper = (props) => {
   } = props
 
   const ALIGN_MIDDLE_PROPS = {
+    height: '100%',
     alignItems: onBack ? 'flex-start' : 'center',
     justifyContent: 'center'
   }
@@ -33,16 +33,18 @@ const PositioningWrapper = (props) => {
     : CONTENT_DEFAULT_WIDTH
 
   return (
-    <Box height={height} flexGrow={1} {...positioningProps}>
-      <Row>
-        {onBack && (
-          <Col xs={24} mb={[2, 2, 2, 0, 0, 0]}>
-            <Back onClick={onBack} {...backBtnProps} divided={divided} />
-          </Col>
-        )}
-        <Col {...columnProps}>{children}</Col>
-      </Row>
-    </Box>
+    <Row
+      height={height}
+      // flexGrow={1}
+      {...positioningProps}
+    >
+      {onBack && (
+        <Col xs={24} mb={[2, 2, 2, 0, 0, 0]}>
+          <Back onClick={onBack} {...backBtnProps} divided={divided} />
+        </Col>
+      )}
+      <Col {...columnProps}>{children}</Col>
+    </Row>
   )
 }
 

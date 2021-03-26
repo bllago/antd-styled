@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Box from '../../Box'
 
 /**
- * AppNavbar (25 Mar 2021)
+ * AppNavbarWrapper (25 Mar 2021)
  *
  * @since      0.0.1
  *
@@ -13,22 +13,22 @@ import Box from '../../Box'
  * @return {ReactComponent}
  */
 
-const AppNavbar = (props) => {
+const AppNavbarWrapper = (props) => {
   const { children, width } = props
 
   return (
-    <Box width={width || 280} {...props}>
+    <Box flexBasis={width || 280} {...props}>
       {children}
     </Box>
   )
 }
 
-AppNavbar.propTypes = {
+AppNavbarWrapper.propTypes = {
   children: PropTypes.node,
   width: PropTypes.number
 }
-AppNavbar.defaultProps = {
+AppNavbarWrapper.defaultProps = {
   width: '280px'
 }
 
-export default AppNavbar
+export default AppNavbarWrapper

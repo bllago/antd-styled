@@ -12,14 +12,14 @@ import Graphic from '../../Media/Graphic'
  * @param {node}         [children]                  Use to place smth. under the title (second level).
  * @param {oneOfType}    [height]                    Use to specify first level height.
  * @param {boolean}      [alignMiddle]               Use to make everything centered.
- * @param {object}       [contentWidth]              Use to specify content width.
- * @param {object}       [graphicProps]              Properties for graphic component.
+ * @param {object}       [contentWidth]              Use to specify content width. Example: xs={24} sm={20} md={16} lg={12} xl={10}
+ * @param {func}         [onBack]                    Back event.
+ * @param {object}       [backBtnProps]              Properties for back button. Read documentation above.
+ * @param {boolean}      [divided]                   Use to place divider between back button and title.
+ * @param {object}       [graphicProps]              Properties for graphic component. Read documentation above.
  * @param {boolean}      [firstLevelHidden]          Use to hide first level (back button, heading and actions).
  * @param {object}       [headingProps]              Properties for heading.
  * @param {node}         [action]                    Use to add actions.
- * @param {func}         [onBack]                    Back event.
- * @param {object}       [backBtnProps]              Properties for back button.
- * @param {boolean}      [divided]                   Use to place divider between back button and title.
  *
  * @return {ReactComponent}
  */
@@ -27,16 +27,16 @@ import Graphic from '../../Media/Graphic'
 const PageWrapper = (props) => {
   const {
     children,
+    height,
+    alignMiddle,
     contentWidth,
+    onBack,
+    backBtnProps,
+    divided,
     graphicProps,
     firstLevelHidden,
     headingProps,
-    alignMiddle,
-    height,
-    action,
-    onBack,
-    backBtnProps,
-    divided
+    action
   } = props
 
   return (
@@ -69,13 +69,18 @@ PageWrapper.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   alignMiddle: PropTypes.bool,
   contentWidth: PropTypes.object,
+  onBack: PropTypes.func,
+  backBtnProps: PropTypes.object,
+  divided: PropTypes.bool,
   graphicProps: PropTypes.object,
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object,
-  action: PropTypes.node,
-  onBack: PropTypes.func,
-  backBtnProps: PropTypes.object,
-  divided: PropTypes.bool
+  action: PropTypes.node
+}
+PageWrapper.defaultProps = {
+  alignMiddle: false,
+  firstLevelHidden: false,
+  divided: true
 }
 
 export default PageWrapper
