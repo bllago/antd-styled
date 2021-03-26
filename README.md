@@ -10,8 +10,30 @@
 npm install --save antd-styled
 ```
 
+## Playground
+At first, run switch to root directory and run it:
+```bash
+npm start
+```
+
+Then switch to "example" directory and run it:
+```bash
+npm start
+```
+
+Then switch back to root directory and run storybook :
+```bash
+npm run storybook
+```
+
+## Deploy changes to GitPages
+Switch to root directory and run deploy:
+```bash
+npm run deploy
+```
+
 ## StoryBook
-https://bllago.github.io/antd-styled/?path=/story/components-divider--template
+https://bllago.github.io/antd-styled/
 
 ## Usage
 
