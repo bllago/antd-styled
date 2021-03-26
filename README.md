@@ -35,12 +35,12 @@ git add . && git commit -m 'Commit message...' && git push && npm publish && npm
 ```
 
 ## Playground
-At first, run switch to root directory and run it:
+Switch to root directory and run project:
 ```bash
 npm start
 ```
 
-Then switch to "example" directory and run it:
+Then switch to playground directory "example" and run project:
 ```bash
 npm start
 ```
