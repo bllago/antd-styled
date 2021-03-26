@@ -10,6 +10,30 @@
 npm install --save antd-styled
 ```
 
+## Usage
+
+```jsx
+import React, { Component } from 'react'
+
+import MyComponent from 'antd-styled'
+import 'antd-styled/dist/index.css'
+
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
+```
+
+## StoryBook
+https://bllago.github.io/antd-styled/
+
+## Deploy Storybook changes to GitPages
+Switch to root directory, then push changes and deploy it to GitPages:
+```bash
+git add . && git commit -m 'Commit message...' && git push && npm publish && npm run deploy-storybook
+```
+
 ## Playground
 At first, run switch to root directory and run it:
 ```bash
@@ -24,30 +48,6 @@ npm start
 Then switch back to root directory and run storybook :
 ```bash
 npm run storybook
-```
-
-## Deploy changes to GitPages
-Switch to root directory and run deploy:
-```bash
-npm run deploy
-```
-
-## StoryBook
-https://bllago.github.io/antd-styled/
-
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'antd-styled'
-import 'antd-styled/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
 ```
 
 ## License
