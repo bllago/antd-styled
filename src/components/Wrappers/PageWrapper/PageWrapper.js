@@ -48,7 +48,7 @@ const PageWrapper = (props) => {
       backBtnProps={backBtnProps}
       divided={divided !== undefined ? divided : true}
     >
-      <Graphic {...graphicProps} />
+      {graphicProps.src && graphicProps.alt && <Graphic {...graphicProps} />}
       <ContentWrapper
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
