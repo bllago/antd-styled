@@ -18,7 +18,7 @@ import Content from '../../LayoutSystem/Content'
  */
 
 const AppWrapper = (props) => {
-  const { horizontal, children, appNavbar, appHeader } = props
+  const { horizontal, children, appNavbar, appHeader, contentProps } = props
 
   const theme = useContext(ThemeContext)
 
@@ -26,7 +26,9 @@ const AppWrapper = (props) => {
     <Layout flexDirection={horizontal && 'row'} {...props}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
-      <Content px={theme.grid.paddings}>{children}</Content>
+      <Content px={theme.grid.paddings} {...contentProps}>
+        {children}
+      </Content>
     </Layout>
   )
 }
