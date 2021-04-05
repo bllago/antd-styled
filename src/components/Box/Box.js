@@ -42,7 +42,8 @@ const StyledDiv = styled('div')(
       cursor: true,
       wordBreak: true,
       zoom: true,
-      transform: true
+      transform: true,
+      transition: true
     })
   )
 )
@@ -66,7 +67,8 @@ Box.propTypes = {
     'cursor',
     'wordBreak',
     'zoom',
-    'transform'
+    'transform',
+    'transition'
   ])
 }
 
