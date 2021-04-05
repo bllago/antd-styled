@@ -45,7 +45,8 @@ const StyledText = styled(AntTypography.Text)(
       wordBreak: true,
       zoom: true,
       transform: true,
-      textTransform: true
+      textTransform: true,
+      textOverflow: true
     })
   )
 )
@@ -73,7 +74,8 @@ Text.propTypes = {
     'wordBreak',
     'zoom',
     'transform',
-    'textTransform'
+    'textTransform',
+    'textOverflow'
   ])
 }
 

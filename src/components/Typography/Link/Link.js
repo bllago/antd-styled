@@ -45,7 +45,8 @@ const StyledLink = styled(AntTypography.Link)(
       wordBreak: true,
       zoom: true,
       transform: true,
-      textTransform: true
+      textTransform: true,
+      textOverflow: true
     })
   )
 )
@@ -73,7 +74,8 @@ Link.propTypes = {
     'wordBreak',
     'zoom',
     'transform',
-    'textTransform'
+    'textTransform',
+    'textOverflow'
   ])
 }
 
