@@ -44,7 +44,8 @@ const StyledTitle = styled(AntTypography.Title)(
       cursor: true,
       wordBreak: true,
       zoom: true,
-      transform: true
+      transform: true,
+      textTransform: true
     })
   )
 )
@@ -71,7 +72,8 @@ Title.propTypes = {
     'cursor',
     'wordBreak',
     'zoom',
-    'transform'
+    'transform',
+    'textTransform'
   ])
 }
 

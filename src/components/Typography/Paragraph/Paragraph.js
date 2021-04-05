@@ -44,7 +44,8 @@ const StyledParagraph = styled(AntTypography.Paragraph)`
     cursor: true,
     wordBreak: true,
     zoom: true,
-    transform: true
+    transform: true,
+    textTransform: true
   })}
 `
 
@@ -70,7 +71,8 @@ Paragraph.propTypes = {
     'cursor',
     'wordBreak',
     'zoom',
-    'transform'
+    'transform',
+    'textTransform'
   ])
 }
 

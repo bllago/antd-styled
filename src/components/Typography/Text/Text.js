@@ -44,7 +44,8 @@ const StyledText = styled(AntTypography.Text)(
       cursor: true,
       wordBreak: true,
       zoom: true,
-      transform: true
+      transform: true,
+      textTransform: true
     })
   )
 )
@@ -71,7 +72,8 @@ Text.propTypes = {
     'cursor',
     'wordBreak',
     'zoom',
-    'transform'
+    'transform',
+    'textTransform'
   ])
 }
 
