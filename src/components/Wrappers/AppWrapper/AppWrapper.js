@@ -26,7 +26,7 @@ const AppWrapper = (props) => {
     <Layout flexDirection={horizontal && 'row'} {...props}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
-      <Content px={theme.grid.paddings} {...contentProps}>
+      <Content px={theme.grid.paddings} {...contentProps} overflow='auto'>
         {children}
       </Content>
     </Layout>
