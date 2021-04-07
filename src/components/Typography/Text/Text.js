@@ -46,7 +46,9 @@ const StyledText = styled(AntTypography.Text)(
       zoom: true,
       transform: true,
       textTransform: true,
-      textOverflow: true
+      textOverflow: true,
+      webkitLineClamp: true,
+      webkitBoxOrient: true
     })
   )
 )
@@ -75,7 +77,9 @@ Text.propTypes = {
     'zoom',
     'transform',
     'textTransform',
-    'textOverflow'
+    'textOverflow',
+    'webkitLineClamp',
+    'webkitBoxOrient'
   ])
 }
 
