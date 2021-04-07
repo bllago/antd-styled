@@ -47,8 +47,12 @@ const StyledText = styled(AntTypography.Text)(
       transform: true,
       textTransform: true,
       textOverflow: true,
-      webkitLineClamp: true,
-      webkitBoxOrient: true
+      webkitLineClamp: {
+        property: '-webkit-line-clamp'
+      },
+      webkitBoxOrient: {
+        property: '-webkit-box-orient'
+      }
     })
   )
 )
