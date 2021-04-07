@@ -7,6 +7,7 @@ import Row from './components/LayoutSystem/Row'
 import Col from './components/LayoutSystem/Col'
 import Img from './components/Media/Img'
 import Box from './components/Box'
+import Button from './components/Button'
 import Card from './components/Card'
 import ContentWrapper from './components/Wrappers/ContentWrapper'
 import PageWrapper from './components/Wrappers/PageWrapper'
@@ -81,7 +82,8 @@ export {
   Notification,
   AppWrapper,
   AppNavbarWrapper,
-  AppHeaderWrapper
+  AppHeaderWrapper,
+  Button
 }
 
 export default {
@@ -125,5 +127,6 @@ export default {
   Notification,
   AppWrapper,
   AppNavbarWrapper,
-  AppHeaderWrapper
+  AppHeaderWrapper,
+  Button
 }
