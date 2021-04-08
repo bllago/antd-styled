@@ -45,7 +45,7 @@ const Notification = (props) => {
     dateTime
   } = props
   return (
-    <Box display='flex' flexGrow={1}>
+    <Box display='flex' flexGrow={1} alignItems='center'>
       <Box display='flex' alignSelf='flex-start' mr={3}>
         {status && <Badge status={status || 'default'} />}
         <Avatar
