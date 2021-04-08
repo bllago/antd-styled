@@ -45,8 +45,8 @@ const Notification = (props) => {
     dateTime
   } = props
   return (
-    <Box display='flex'>
-      <Box display='flex' alignItems='center' alignSelf='flex-start' mr={3}>
+    <Box display='flex' flexGrow={1}>
+      <Box display='flex' alignSelf='flex-start' mr={3}>
         <Badge status={status || 'default'} />
         <Avatar
           src={avatarUrl}
@@ -56,22 +56,31 @@ const Notification = (props) => {
       </Box>
       <Box display='flex' flexDirection='column'>
         <Text lineHeight={1.5}>
-          {userName && <Link href={onClickUserName}>{userName} </Link>}
+          {userName && onClickUserName ? (
+            <Link href={onClickUserName}>{userName} </Link>
+          ) : (
+            `${userName} `
+          )}
           {message}
         </Text>
-        <Box mt={2} display='flex' alignItems='center'>
-          {redirectButtonUrl && redirectButtonText && (
-            <Fragment>
-              <Link lineHeight={1.5} onClick={redirectButtonUrl}>
-                {redirectButtonText}
-              </Link>
-              <Divider type='vertical' />
-            </Fragment>
-          )}
-          <Link lineHeight={1.5} onClick={onClickMarkAsSeen}>
-            {markAsSeenText || 'Mark as seen'}
-          </Link>
-        </Box>
+        {(redirectButtonText && redirectButtonUrl) ||
+          (markAsSeenText && onClickMarkAsSeen && (
+            <Box mt={2} display='flex' alignItems='center'>
+              {redirectButtonText && redirectButtonUrl && (
+                <Fragment>
+                  <Link lineHeight={1.5} onClick={redirectButtonUrl}>
+                    {redirectButtonText}
+                  </Link>
+                  <Divider type='vertical' />
+                </Fragment>
+              )}
+              {onClickMarkAsSeen && (
+                <Link lineHeight={1.5} onClick={onClickMarkAsSeen}>
+                  {markAsSeenText || 'Mark as seen'}
+                </Link>
+              )}
+            </Box>
+          ))}
       </Box>
       <Box
         display='flex'
