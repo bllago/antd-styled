@@ -47,7 +47,7 @@ const Notification = (props) => {
   return (
     <Box display='flex' flexGrow={1}>
       <Box display='flex' alignSelf='flex-start' mr={3}>
-        <Badge status={status || 'default'} />
+        {status && <Badge status={status || 'default'} />}
         <Avatar
           src={avatarUrl}
           size={avatarSize || 40}
