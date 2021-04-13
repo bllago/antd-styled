@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageWrapper, AppWrapper, AppNavbarWrapper, AppHeaderWrapper } from 'antd-plus'
+import { PageWrapper, AppWrapper, AppNavbarWrapper, AppHeaderWrapper, Button } from 'antd-plus'
 import { ThemeProvider } from 'styled-components'
 
 import theme from './styles/theme'
@@ -22,7 +22,7 @@ const App = () => {
           }}
           // onBack
         >
-          Content
+          <Button variant="white">Hello</Button>
         </PageWrapper>
       </AppWrapper>
     </ThemeProvider>
