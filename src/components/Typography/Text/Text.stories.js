@@ -24,6 +24,12 @@ export default {
       },
       description: 'Additional CSS properties which could be applyed.',
       control: { disable: true }
+    },
+    variant: {
+      table: {
+        category: 'Custom properties'
+      },
+      description: 'Use to change text type.'
     }
   }
 }
