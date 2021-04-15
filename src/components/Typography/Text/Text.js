@@ -18,20 +18,23 @@ import {
 } from 'styled-system'
 
 /**
- * Text (14 Apr 2021)
+ * Text (15 Apr 2021)
  *
- * @since      0.0.2
+ * @since      0.0.3
  *
  * @param {object}      [Default AntD props]      Component absolutely maintain default AntD text properties (check Ant documentation: https://ant.design/components/typography/#Typography.Text).
  * @param {oneOf}       [Packages]                Applyed styled-system packages (check styled-system API documentation: https://styled-system.com/api).
  * @param {oneOf}       [Extra CSS props]         Additional CSS properties which could be applyed.
  * @param {oneOf}       [variant]                 Use to change text type.
+ * @param {oneOf}       [isEllipsis]              Use to truncate text.
  *
  * @return {ReactComponent}
  */
 
 const Text = (props) => {
   const theme = useContext(ThemeContext)
+
+  const { isEllipsis } = props
 
   const StyledText = styled(AntTypography.Text)(
     compose(
@@ -132,7 +135,14 @@ const Text = (props) => {
     )
   )
 
-  return <StyledText {...props} />
+  return (
+    <StyledText
+      textOverflow={isEllipsis && 'ellipsis'}
+      whiteSpace={isEllipsis && 'nowrap'}
+      overflow={isEllipsis && 'hidden'}
+      {...props}
+    />
+  )
 }
 
 Text.propTypes = {
@@ -171,7 +181,8 @@ Text.propTypes = {
     'body2',
     'caption1',
     'caption2'
-  ])
+  ]),
+  isEllipsis: PropTypes.bool
 }
 
 export default Text

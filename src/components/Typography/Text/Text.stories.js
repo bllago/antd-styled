@@ -30,6 +30,12 @@ export default {
         category: 'Custom properties'
       },
       description: 'Use to change text type.'
+    },
+    isEllipsis: {
+      table: {
+        category: 'Custom properties'
+      },
+      description: 'Use to truncate text.'
     }
   }
 }
