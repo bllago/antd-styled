@@ -10,7 +10,8 @@ import Graphic from '../../Media/Graphic'
  * @since      0.0.1
  *
  * @param {node}         [children]                  Use to place smth. under the title (second level).
- * @param {oneOfType}    [height]                    Use to specify first level height.
+ * @param {oneOfType}    [height]                    Use to specify content height.
+ * @param {oneOfType}    [minHeight]                 Use to specify content min-height.
  * @param {boolean}      [alignMiddle]               Use to make everything centered.
  * @param {object}       [contentWidth]              Use to specify content width. Example: xs={24} sm={20} md={16} lg={12} xl={10}
  * @param {func}         [onBack]                    Back event.
@@ -28,6 +29,7 @@ const PageWrapper = (props) => {
   const {
     children,
     height,
+    minHeight,
     alignMiddle,
     contentWidth,
     onBack,
@@ -42,6 +44,7 @@ const PageWrapper = (props) => {
   return (
     <PositioningWrapper
       height={height}
+      minHeight={minHeight}
       alignMiddle={alignMiddle}
       contentWidth={contentWidth}
       onBack={alignMiddle && onBack}
@@ -68,6 +71,7 @@ const PageWrapper = (props) => {
 PageWrapper.propTypes = {
   children: PropTypes.node,
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  minHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   alignMiddle: PropTypes.bool,
   contentWidth: PropTypes.object,
   onBack: PropTypes.func,

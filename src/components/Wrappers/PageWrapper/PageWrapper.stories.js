@@ -15,7 +15,11 @@ export default {
       control: { disable: true }
     },
     height: {
-      description: 'Use to specify first level height.'
+      description: 'Use to specify content height.'
+      // control: { disable: true }
+    },
+    minHeight: {
+      description: 'Use to specify content min-height.'
       // control: { disable: true }
     },
     alignMiddle: {
