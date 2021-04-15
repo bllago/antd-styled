@@ -12,6 +12,7 @@ const PositioningWrapper = (props) => {
   const {
     children,
     height,
+    minHeight,
     alignMiddle,
     contentWidth,
     onBack,
@@ -35,6 +36,7 @@ const PositioningWrapper = (props) => {
   return (
     <Row
       height={height}
+      minHeight={minHeight}
       // flexGrow={1}
       {...positioningProps}
     >
@@ -51,6 +53,7 @@ const PositioningWrapper = (props) => {
 PositioningWrapper.propTypes = {
   children: PropTypes.node,
   height: PropTypes.string,
+  minHeight: PropTypes.string,
   alignMiddle: PropTypes.bool,
   contentWidth: PropTypes.object,
   onBack: PropTypes.func,
