@@ -24,8 +24,8 @@ const ContentWrapperTest = (props) => {
 
   return (
     <Container>
-      <Row>
-        {!firstLevelHidden && (
+      {!firstLevelHidden && (
+        <Row>
           <Col
             cw={12}
             mb={
@@ -62,7 +62,9 @@ const ContentWrapperTest = (props) => {
               {action && <Col>{action}</Col>}
             </Row>
           </Col>
-        )}
+        </Row>
+      )}
+      <Row>
         <Col cw={12} display='flex' flexDirection='column' flex='1'>
           {children}
         </Col>
