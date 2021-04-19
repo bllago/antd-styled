@@ -1,29 +1,34 @@
 import React from 'react'
-import { PageWrapper, AppWrapper, AppNavbarWrapper, AppHeaderWrapper, Button } from 'antd-plus'
-import { ThemeProvider } from 'styled-components'
-
 import theme from './styles/theme'
+import { ThemeProvider } from 'styled-components'
+import { PageWrapperTest, AppWrapper, AppNavbarWrapper, AppHeaderWrapper, Text, Button } from 'antd-plus'
+import { Container, Row, Col, Box } from '@qonsoll/react-design'
+
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <AppWrapper
-        horizontal
+        // horizontal
         appNavbar={<AppNavbarWrapper bg="#4c4c4c" />}
         appHeader={<AppHeaderWrapper height={64} bg="#4c4c4c" />}
+        bottomNavbar={<AppHeaderWrapper height={64} bg="#4c4c4c" />}
       >
-        <PageWrapper
-          alignMiddle
+        <PageWrapperTest
           headingProps={{
             title: "Clinic members",
-            titleSize: 1,
+            titleSize: 3,
             textAlign: 'left',
-            // subTitle: "Welcome your teammates! :)"
+            marginBottom: 24
           }}
-          // onBack
         >
-          <Button variant="white">Hello</Button>
-        </PageWrapper>
+          <Container>
+            <Row>
+              <Col cw={12}><Text>Here will be very long but smart and especialy usefull description...</Text></Col>
+              <Col cw={12} mt="auto"><Button variant="white">Hello</Button></Col>
+            </Row>
+          </Container>
+        </PageWrapperTest>
       </AppWrapper>
     </ThemeProvider>
   )
