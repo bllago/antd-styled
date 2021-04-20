@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import PositioningWrapperTest from '../PositioningWrapperTest'
-import ContentWrapperTest from '../ContentWrapperTest'
+import PositioningWrapper from '../PositioningWrapper'
+import ContentWrapper from '../ContentWrapper'
 import Graphic from '../../Media/Graphic'
 import { ThemeContext } from 'styled-components'
 
@@ -44,7 +44,7 @@ const PageWrapper = (props) => {
   }
 
   return (
-    <PositioningWrapperTest
+    <PositioningWrapper
       alignMiddle={alignMiddle}
       contentWidth={contentWidth}
       onBack={alignMiddle && onBack}
@@ -61,7 +61,7 @@ const PageWrapper = (props) => {
         <Graphic {...graphicProps} />
       )}
       {/* <Graphic {...graphicProps} /> */}
-      <ContentWrapperTest
+      <ContentWrapper
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         alignMiddle={alignMiddle}
@@ -71,8 +71,8 @@ const PageWrapper = (props) => {
         divided={divided !== undefined ? divided : true}
       >
         {children}
-      </ContentWrapperTest>
-    </PositioningWrapperTest>
+      </ContentWrapper>
+    </PositioningWrapper>
   )
 }
 
