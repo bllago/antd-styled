@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, Row, Col } from '@qonsoll/react-design'
-// import Row from '../../LayoutSystem/Row'
-// import Col from '../../LayoutSystem/Col'
+import { Box } from '@qonsoll/react-design'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
 import Back from '../../Actions/Back'
 
@@ -19,57 +17,53 @@ const ContentWrapperTest = (props) => {
   } = props
 
   const DEFAULT_PROPS = {
-    marginBottom: 48
+    marginBottom: 24
   }
 
   return (
-    <Container>
+    <Box
+      height={!alignMiddle && 'inherit'}
+      display='flex'
+      flexDirection='column'
+      flexGrow={alignMiddle && 1}
+    >
       {!firstLevelHidden && (
-        <Row>
-          <Col
-            cw={12}
-            mb={
-              (headingProps && headingProps.marginBottom) ||
-              DEFAULT_PROPS.marginBottom
+        <Box
+          display='flex'
+          alignItems={
+            headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
+          }
+          mb={
+            (headingProps && headingProps.marginBottom) ||
+            DEFAULT_PROPS.marginBottom
+          }
+        >
+          <Box
+            display='flex'
+            flex={1}
+            alignItems={
+              headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
+            }
+            justifyContent={
+              onBack || action || !alignMiddle ? 'flex-start' : 'center'
             }
           >
-            <Row
-              alignItems={
-                headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
-              }
-            >
-              <Col
-                display='flex'
-                flex='1 1 auto'
-                alignItems={
-                  headingProps && !headingProps.subTitle
-                    ? 'center'
-                    : 'flex-start'
-                }
-                justifyContent={
-                  onBack || action || !alignMiddle ? 'flex-start' : 'center'
-                }
-              >
-                {onBack && (
-                  <Back
-                    onClick={onBack}
-                    {...backBtnProps}
-                    divided={divided !== undefined ? divided : true}
-                  />
-                )}
-                <HeadingPrimary {...headingProps} />
-              </Col>
-              {action && <Col>{action}</Col>}
-            </Row>
-          </Col>
-        </Row>
+            {onBack && (
+              <Back
+                onClick={onBack}
+                {...backBtnProps}
+                divided={divided !== undefined ? divided : true}
+              />
+            )}
+            <HeadingPrimary {...headingProps} />
+          </Box>
+          {action && <Box>{action}</Box>}
+        </Box>
       )}
-      <Row>
-        <Col cw={12} display='flex' flexDirection='column' flex='1'>
-          {children}
-        </Col>
-      </Row>
-    </Container>
+      <Box flex={1} height='100%'>
+        {children}
+      </Box>
+    </Box>
   )
 }
 

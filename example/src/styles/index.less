@@ -1,0 +1,152 @@
+@import "~antd/dist/antd.less";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --grid-columns: 12;
+  --grid-gutter-default: 8px;
+  --grid-gutter-sm: 8px;
+  --grid-gutter-md: 12px;
+  --grid-gutter-lg: 16px;
+  --grid-gutter-xl: 16px;
+  --grid-gutter-xxl: 16px;
+  --grid-negative-gutter-default: -8px;
+  --grid-negative-gutter-sm: -8px;
+  --grid-negative-gutter-md: -12px;
+  --grid-negative-gutter-lg: -16px;
+  --grid-negative-gutter-xl: -16px;
+  --grid-negative-gutter-xxl: -16px;
+  --grid-container-max-width-sm: 540px;
+  --grid-container-max-width-md: 720px;
+  --grid-container-max-width-lg: 960px;
+  --grid-container-max-width-xl: 1140px;
+  --grid-container-max-width-xxl: 1320px;
+}
+
+#root {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+// Fix for AntD Input component: prevent double background while autocomplete works ——— Start
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+input:-internal-autofill-selected,
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  font-family: "Rubik"; // FIXME: reference to default theme font-family
+  font-size: 16px; // FIXME: reference to default theme font-size
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent !important;
+}
+// Fix for AntD Input component: prevent double background while autocomplete works ——— End
+
+// DIVIDER
+.ant-divider-horizontal.ant-divider-with-text {
+  font-size: 16px;
+  margin: 0;
+}
+
+// TIMELINE
+.ant-timeline-item-content {
+  top: -15px;
+  margin: 0 0 0 18px;
+}
+
+.ant-carousel {
+  width: 100%;
+}
+
+// CARD
+.ant-card-body {
+    padding: 20px 24px;
+}
+.ant-card-small > .ant-card-body {
+    padding: 12px 24px;
+}
+
+// BADGE
+.ant-badge-count {
+    box-shadow: none;
+}
+.ant-badge-multiple-words {
+    padding: 0 4px;
+}
+.ant-scroll-number-only {
+    height: inherit;
+}
+.ant-scroll-number-only > p.ant-scroll-number-only-unit {
+    height: inherit;
+}
+
+// AVATAR
+.ant-avatar-group .ant-avatar {
+    border: 2px solid #fff;
+}
+.ant-avatar-group .ant-avatar.ant-avatar-lg:not(:last-child) {
+    clip-path: path('M20,0 C24.5026548,0 28.6577845,1.48793206 32.0005148,3.99892198 C27.1424245,7.64696983 24,13.4565086 24,20 C24,26.5434914 27.1424245,32.3530302 32.0004901,36.0018329 C28.6577845,38.5120679 24.5026548,40 20,40 C8.954305,40 0,31.045695 0,20 C0,8.954305 8.954305,0 20,0 Z');
+}
+.ant-avatar-lg {
+    line-height: 36px;
+}
+.ant-avatar-string {
+    color: #111;
+}
+
+// BUTTON
+.ant-btn:hover, .ant-btn:focus {
+    color: #111;
+    background: rgba(17, 17, 17, 0.12);
+    border-color: transparent;
+}
+
+// TAG
+.ant-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+}
+.ant-tag:last-child {
+    margin-right: 0;
+}
+
+// CAROUSEL
+// .ant-carousel {
+//     border-radius: 16px 16px 0 0;
+//     overflow: hidden;
+// }
+.ant-card-cover img {
+    border-radius: 0;
+}
+.ant-carousel .slick-initialized .slick-slide {
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+.ant-carousel .slick-list .slick-slide.slick-active {
+    opacity: 1;
+    transition: all 0.3s;
+}
+.ant-carousel .slick-dots-bottom {
+    bottom: 0px;
+}
+
+// UPLOAD
+.ant-upload.ant-upload-select {
+    display: block;
+}
+
+// TYPOGRAPHY
+h3.ant-typography, .ant-typography h3 {
+    margin-bottom: 0;
+    }

@@ -28,8 +28,6 @@ import Graphic from '../../Media/Graphic'
 const PageWrapperTest = (props) => {
   const {
     children,
-    height,
-    minHeight,
     alignMiddle,
     contentWidth,
     onBack,
@@ -43,16 +41,16 @@ const PageWrapperTest = (props) => {
 
   return (
     <PositioningWrapperTest
-      height={height}
-      minHeight={minHeight}
       alignMiddle={alignMiddle}
       contentWidth={contentWidth}
       onBack={alignMiddle && onBack}
       backBtnProps={backBtnProps}
       divided={divided !== undefined ? divided : true}
     >
-      {/* {graphicProps.src && graphicProps.alt && <Graphic {...graphicProps} />} */}
-      <Graphic {...graphicProps} />
+      {graphicProps && graphicProps.src && graphicProps.alt && (
+        <Graphic {...graphicProps} />
+      )}
+      {/* <Graphic {...graphicProps} /> */}
       <ContentWrapperTest
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
@@ -70,10 +68,12 @@ const PageWrapperTest = (props) => {
 
 PageWrapperTest.propTypes = {
   children: PropTypes.node,
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  minHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   alignMiddle: PropTypes.bool,
-  contentWidth: PropTypes.object,
+  contentWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,

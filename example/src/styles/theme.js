@@ -114,13 +114,13 @@ theme.gradient.primary = 'linear-gradient(-45deg, #D0E3F4, #F2EDF1)'
 
 //// SHADOWS
 theme.shadow = {}
-// theme.shadow.card =
-//   '0 3px 4px -4px rgba(3,11,23,0.12), 0 6px 12px 0 rgba(3,11,23,0.08), 0 0px 32px 0px rgba(3,11,23,0.05)'
+theme.shadow.card = 'unset'
 // theme.shadow.appNav = `2px 0 2px 0 ${theme.color.dark.t.lighten3}, -3px 0 16px 10px ${theme.color.primary.t.lighten3}`
 
 //// OUTLINE
 theme.outline = {}
 // theme.outline.appNavAvatar = `0 0 0 2px ${theme.color.white.default}`
+theme.outline.avatar = `2px solid ${theme.color.dark.t.lighten7}`
 
 //// TRANSITION
 theme.transition = {}
@@ -134,6 +134,10 @@ theme.borderRadius.lg = '12px'
 theme.borderRadius.md = '8px'
 theme.borderRadius.sm = '4px'
 theme.borderRadius.xs = '2px'
+
+//// BORDER
+theme.border = {}
+theme.border.uploadArea = `2px dashed ${theme.color.dark.t.lighten8}`
 
 //// TYPOGRAPHY
 theme.typography = {}
@@ -178,6 +182,7 @@ theme.typography.fontWeight.light = 300
 
 // Letter spacing
 theme.typography.letterSpacing = {}
+theme.typography.letterSpacing.none = 0
 theme.typography.letterSpacing.default = 0.6
 
 export default theme

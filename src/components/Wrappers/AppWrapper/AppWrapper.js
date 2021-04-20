@@ -31,10 +31,15 @@ const AppWrapper = (props) => {
   const theme = useContext(ThemeContext)
 
   return (
-    <Layout flexDirection={horizontal && 'row'} {...props}>
+    <Layout height='inherit' flexDirection={horizontal && 'row'} {...props}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
-      <Content px={theme.grid.paddings} {...contentProps} overflow='auto'>
+      <Content
+        px={theme.grid.paddings}
+        height='100%'
+        overflow='auto'
+        {...contentProps}
+      >
         {children}
       </Content>
       {!horizontal && bottomNavbar}
