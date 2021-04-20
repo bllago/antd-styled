@@ -10,11 +10,8 @@ import Box from './components/Box'
 import Button from './components/Button'
 import Card from './components/Card'
 import ContentWrapper from './components/Wrappers/ContentWrapper'
-import ContentWrapperTest from './components/Wrappers/ContentWrapperTest'
 import PageWrapper from './components/Wrappers/PageWrapper'
-import PageWrapperTest from './components/Wrappers/PageWrapperTest'
 import PositioningWrapper from './components/Wrappers/PositioningWrapper'
-import PositioningWrapperTest from './components/Wrappers/PositioningWrapperTest'
 import Graphic from './components/Media/Graphic'
 import Avatar from './components/Media/Avatar'
 import HeadingPrimary from './components/Heading/HeadingPrimary'
@@ -56,11 +53,8 @@ export {
   Box,
   Card,
   ContentWrapper,
-  ContentWrapperTest,
   PageWrapper,
-  PageWrapperTest,
   PositioningWrapper,
-  PositioningWrapperTest,
   Graphic,
   Avatar,
   HeadingPrimary,
@@ -104,11 +98,8 @@ export default {
   Box,
   Card,
   ContentWrapper,
-  ContentWrapperTest,
   PageWrapper,
-  PageWrapperTest,
   PositioningWrapper,
-  PositioningWrapperTest,
   Graphic,
   Avatar,
   HeadingPrimary,

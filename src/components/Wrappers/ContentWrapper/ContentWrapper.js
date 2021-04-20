@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Row from '../../LayoutSystem/Row'
-import Col from '../../LayoutSystem/Col'
+import { Box } from '@qonsoll/react-design'
 import HeadingPrimary from '../../Heading/HeadingPrimary'
 import Back from '../../Actions/Back'
 
-const ContentWrapper = (props) => {
+const ContentWrapperTest = (props) => {
   const {
     firstLevelHidden,
     headingProps,
@@ -18,60 +17,57 @@ const ContentWrapper = (props) => {
   } = props
 
   const DEFAULT_PROPS = {
-    marginBottom: 48
+    marginBottom: 24
   }
 
   return (
-    <Row
-      // ——————↓——————— Test props
-      minHeight='100%'
+    <Box
+      height={!alignMiddle && 'inherit'}
+      display='flex'
       flexDirection='column'
-      // ——————↑——————— Test props
+      flexGrow={alignMiddle && 1}
     >
       {!firstLevelHidden && (
-        <Col
-          xs={24}
+        <Box
+          display='flex'
+          alignItems={
+            headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
+          }
           mb={
             (headingProps && headingProps.marginBottom) ||
             DEFAULT_PROPS.marginBottom
           }
         >
-          <Row
+          <Box
+            display='flex'
+            flex={1}
             alignItems={
               headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
             }
+            justifyContent={
+              onBack || action || !alignMiddle ? 'flex-start' : 'center'
+            }
           >
-            <Col
-              display='flex'
-              flex='1 1 auto'
-              alignItems={
-                headingProps && !headingProps.subTitle ? 'center' : 'flex-start'
-              }
-              justifyContent={
-                onBack || action || !alignMiddle ? 'flex-start' : 'center'
-              }
-            >
-              {onBack && (
-                <Back
-                  onClick={onBack}
-                  {...backBtnProps}
-                  divided={divided !== undefined ? divided : true}
-                />
-              )}
-              <HeadingPrimary {...headingProps} />
-            </Col>
-            {action && <Col>{action}</Col>}
-          </Row>
-        </Col>
+            {onBack && (
+              <Back
+                onClick={onBack}
+                {...backBtnProps}
+                divided={divided !== undefined ? divided : true}
+              />
+            )}
+            <HeadingPrimary {...headingProps} />
+          </Box>
+          {action && <Box>{action}</Box>}
+        </Box>
       )}
-      <Col xs={24} display='flex' flexDirection='column' flex={1}>
+      <Box flex={1} height='100%'>
         {children}
-      </Col>
-    </Row>
+      </Box>
+    </Box>
   )
 }
 
-ContentWrapper.propTypes = {
+ContentWrapperTest.propTypes = {
   children: PropTypes.node,
   firstLevelHidden: PropTypes.bool,
   headingProps: PropTypes.object.isRequired,
@@ -82,4 +78,4 @@ ContentWrapper.propTypes = {
   alignMiddle: PropTypes.bool
 }
 
-export default ContentWrapper
+export default ContentWrapperTest

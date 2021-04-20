@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/index.css'
 import theme from './styles/theme'
 import { ThemeProvider } from 'styled-components'
-import { PageWrapperTest, AppWrapper, AppNavbarWrapper, AppHeaderWrapper, Text, Button } from 'antd-plus'
+import { PageWrapper, AppWrapper, AppNavbarWrapper, AppHeaderWrapper, Text, Button } from 'antd-plus'
 import { Container, Row, Col } from '@qonsoll/react-design'
 
 
@@ -19,7 +19,7 @@ const App = () => {
         appHeader={<AppHeaderWrapper height={64} bg="#4c4c4c" />}
         bottomNavbar={<AppHeaderWrapper height={64} bg="#4c4c4c" />}
       >
-        <PageWrapperTest
+        <PageWrapper
           alignMiddle
           headingProps={{
             title: "Clinic members",
@@ -37,7 +37,7 @@ const App = () => {
               <Col cw={12} mt="auto"><Button variant="white" block>Hello</Button></Col>
             </Row>
           </Container>
-        </PageWrapperTest>
+        </PageWrapper>
       </AppWrapper>
     </ThemeProvider>
   )

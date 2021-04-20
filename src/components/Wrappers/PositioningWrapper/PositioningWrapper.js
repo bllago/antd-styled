@@ -1,18 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Row from '../../LayoutSystem/Row'
-import Col from '../../LayoutSystem/Col'
+import { Box } from '@qonsoll/react-design'
 import Back from '../../Actions/Back'
-import {
-  CENTERED_CONTENT_DEFAULT_WIDTH,
-  CONTENT_DEFAULT_WIDTH
-} from './constants'
 
 const PositioningWrapper = (props) => {
   const {
     children,
-    height,
-    minHeight,
     alignMiddle,
     contentWidth,
     onBack,
@@ -20,42 +13,41 @@ const PositioningWrapper = (props) => {
     divided
   } = props
 
-  const ALIGN_MIDDLE_PROPS = {
-    height: '100%',
-    alignItems: onBack ? 'flex-start' : 'center',
-    justifyContent: 'center'
-  }
-
-  const positioningProps = alignMiddle && ALIGN_MIDDLE_PROPS
-  const columnProps = alignMiddle
-    ? contentWidth && Object.keys(contentWidth).length
-      ? contentWidth
-      : CENTERED_CONTENT_DEFAULT_WIDTH
-    : CONTENT_DEFAULT_WIDTH
-
   return (
-    <Row
-      height={height}
-      minHeight={minHeight}
-      // flexGrow={1}
-      {...positioningProps}
+    <Box
+      height='inherit'
+      display='flex'
+      justifyContent={alignMiddle && 'center'}
+      flexDirection='column'
     >
       {onBack && (
-        <Col xs={24} mb={[2, 2, 2, 0, 0, 0]}>
+        <Box mb={[2, 2, 2, 0, 0]}>
           <Back onClick={onBack} {...backBtnProps} divided={divided} />
-        </Col>
+        </Box>
       )}
-      <Col {...columnProps}>{children}</Col>
-    </Row>
+      <Box
+        display={alignMiddle && onBack && 'flex'}
+        alignItems={alignMiddle && onBack && 'center'}
+        flex={(!alignMiddle || (alignMiddle && onBack)) && 1}
+        height={(!alignMiddle || (alignMiddle && onBack)) && '100%'}
+        width={alignMiddle && contentWidth}
+        ml={alignMiddle && contentWidth && 'auto'}
+        mr={alignMiddle && contentWidth && 'auto'}
+      >
+        {children}
+      </Box>
+    </Box>
   )
 }
 
 PositioningWrapper.propTypes = {
   children: PropTypes.node,
-  height: PropTypes.string,
-  minHeight: PropTypes.string,
   alignMiddle: PropTypes.bool,
-  contentWidth: PropTypes.object,
+  contentWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool

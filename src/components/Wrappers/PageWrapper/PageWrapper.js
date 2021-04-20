@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import PositioningWrapper from '../PositioningWrapper'
-import ContentWrapper from '../ContentWrapper'
+import PositioningWrapperTest from '../PositioningWrapperTest'
+import ContentWrapperTest from '../ContentWrapperTest'
 import Graphic from '../../Media/Graphic'
+import { ThemeContext } from 'styled-components'
 
 /**
- * PageWrapper (19 Dec 2020)
+ * PageWrapper (20 Apr 2021)
  *
  * @since      0.0.1
  *
  * @param {node}         [children]                  Use to place smth. under the title (second level).
- * @param {oneOfType}    [height]                    Use to specify content height.
- * @param {oneOfType}    [minHeight]                 Use to specify content min-height.
  * @param {boolean}      [alignMiddle]               Use to make everything centered.
  * @param {object}       [contentWidth]              Use to specify content width. Example: xs={24} sm={20} md={16} lg={12} xl={10}
  * @param {func}         [onBack]                    Back event.
@@ -28,8 +27,6 @@ import Graphic from '../../Media/Graphic'
 const PageWrapper = (props) => {
   const {
     children,
-    height,
-    minHeight,
     alignMiddle,
     contentWidth,
     onBack,
@@ -40,20 +37,31 @@ const PageWrapper = (props) => {
     headingProps,
     action
   } = props
+  const theme = useContext(ThemeContext)
+
+  const DEFAULT_BACK_BUTTON_PROPS = {
+    divided: theme.defaultComponentSettings.backButton.divided
+  }
 
   return (
-    <PositioningWrapper
-      height={height}
-      minHeight={minHeight}
+    <PositioningWrapperTest
       alignMiddle={alignMiddle}
       contentWidth={contentWidth}
       onBack={alignMiddle && onBack}
       backBtnProps={backBtnProps}
-      divided={divided !== undefined ? divided : true}
+      divided={
+        divided !== undefined
+          ? divided
+          : DEFAULT_BACK_BUTTON_PROPS.divided
+          ? DEFAULT_BACK_BUTTON_PROPS.divided
+          : true
+      }
     >
-      {/* {graphicProps.src && graphicProps.alt && <Graphic {...graphicProps} />} */}
-      <Graphic {...graphicProps} />
-      <ContentWrapper
+      {graphicProps && graphicProps.src && graphicProps.alt && (
+        <Graphic {...graphicProps} />
+      )}
+      {/* <Graphic {...graphicProps} /> */}
+      <ContentWrapperTest
         firstLevelHidden={firstLevelHidden}
         headingProps={headingProps}
         alignMiddle={alignMiddle}
@@ -63,17 +71,19 @@ const PageWrapper = (props) => {
         divided={divided !== undefined ? divided : true}
       >
         {children}
-      </ContentWrapper>
-    </PositioningWrapper>
+      </ContentWrapperTest>
+    </PositioningWrapperTest>
   )
 }
 
 PageWrapper.propTypes = {
   children: PropTypes.node,
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  minHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   alignMiddle: PropTypes.bool,
-  contentWidth: PropTypes.object,
+  contentWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array
+  ]),
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,

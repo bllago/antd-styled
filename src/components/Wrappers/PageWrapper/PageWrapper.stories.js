@@ -14,14 +14,6 @@ export default {
       description: 'Use to place smth. under the title (second level).',
       control: { disable: true }
     },
-    height: {
-      description: 'Use to specify content height.'
-      // control: { disable: true }
-    },
-    minHeight: {
-      description: 'Use to specify content min-height.'
-      // control: { disable: true }
-    },
     alignMiddle: {
       description: 'Use to make everything centered.'
     },
