@@ -16,7 +16,7 @@ const PositioningWrapper = (props) => {
 
   return (
     <Box
-      height={isBottomSticky && 'inherit'}
+      height={(alignMiddle || isBottomSticky) && 'inherit'}
       display='flex'
       justifyContent={alignMiddle && 'center'}
       flexDirection='column'
