@@ -17,9 +17,11 @@ export default {
     alignMiddle: {
       description: 'Use to make everything centered.'
     },
+    isBottomSticky: {
+      description: 'Allows to stick smth. to the bottom.'
+    },
     contentWidth: {
-      description:
-        'Use to specify content width. Example: xs={24} sm={20} md={16} lg={12} xl={10}',
+      description: 'Use to specify content width.',
       control: { disable: true }
     },
     onBack: {

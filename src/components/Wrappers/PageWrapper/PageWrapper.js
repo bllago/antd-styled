@@ -12,7 +12,8 @@ import { ThemeContext } from 'styled-components'
  *
  * @param {node}         [children]                  Use to place smth. under the title (second level).
  * @param {boolean}      [alignMiddle]               Use to make everything centered.
- * @param {object}       [contentWidth]              Use to specify content width. Example: xs={24} sm={20} md={16} lg={12} xl={10}
+ * @param {boolean}      [isBottomSticky]            Allows to stick smth. to the bottom.
+ * @param {object}       [contentWidth]              Use to specify content width.
  * @param {func}         [onBack]                    Back event.
  * @param {object}       [backBtnProps]              Properties for back button. Read documentation above.
  * @param {boolean}      [divided]                   Use to place divider between back button and title.
@@ -28,6 +29,7 @@ const PageWrapper = (props) => {
   const {
     children,
     alignMiddle,
+    isBottomSticky,
     contentWidth,
     onBack,
     backBtnProps,
@@ -46,6 +48,7 @@ const PageWrapper = (props) => {
   return (
     <PositioningWrapper
       alignMiddle={alignMiddle}
+      isBottomSticky={isBottomSticky}
       contentWidth={contentWidth}
       onBack={alignMiddle && onBack}
       backBtnProps={backBtnProps}
