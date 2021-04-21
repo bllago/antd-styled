@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { Button, Tooltip } from 'antd'
+import { Tooltip } from 'antd'
+import Button from '../../Button'
 import Divider from '../../Divider'
 import Box from '../../Box'
 import { ArrowLeftOutlined } from '@ant-design/icons'

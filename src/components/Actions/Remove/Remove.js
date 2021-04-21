@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { Button, Typography, Tooltip, Popconfirm } from 'antd'
+import { Typography, Tooltip, Popconfirm } from 'antd'
+import Button from '../../Button'
 import { DeleteOutlined } from '@ant-design/icons'
 
 /**
