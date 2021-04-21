@@ -10,16 +10,17 @@ const PositioningWrapper = (props) => {
     contentWidth,
     onBack,
     backBtnProps,
-    divided
+    divided,
+    isBottomSticky
   } = props
 
   return (
     <Box
-      height='inherit'
+      height={isBottomSticky && 'inherit'}
       display='flex'
       justifyContent={alignMiddle && 'center'}
       flexDirection='column'
-      minHeight='fit-content'
+      // minHeight='fit-content'
     >
       {onBack && (
         <Box mb={[2, 2, 2, 0, 0]}>
@@ -31,7 +32,7 @@ const PositioningWrapper = (props) => {
         alignItems={alignMiddle && onBack && 'center'}
         flex={(!alignMiddle || (alignMiddle && onBack)) && 1}
         height={(!alignMiddle || (alignMiddle && onBack)) && '100%'}
-        minHeight='fit-content'
+        // minHeight='fit-content'
         width={alignMiddle && contentWidth}
         ml={alignMiddle && contentWidth && 'auto'}
         mr={alignMiddle && contentWidth && 'auto'}
@@ -52,7 +53,8 @@ PositioningWrapper.propTypes = {
   ]),
   onBack: PropTypes.func,
   backBtnProps: PropTypes.object,
-  divided: PropTypes.bool
+  divided: PropTypes.bool,
+  isBottomSticky: PropTypes.bool
 }
 
 export default PositioningWrapper
