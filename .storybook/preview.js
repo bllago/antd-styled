@@ -1,4 +1,7 @@
+import React from 'react'
 import "antd/dist/antd.css";
+import {ThemeProvider} from 'styled-components'
+import theme from './theme'
 
 export const parameters = {
   layout: 'centered',
@@ -7,3 +10,11 @@ export const parameters = {
     argTypesRegex: "^on[A-Z].*",
   },
 }
+
+export const decorators = [
+ (Story) => (
+	 <ThemeProvider theme = {theme}>
+		 <Story/>
+	 </ThemeProvider>
+ )
+]
