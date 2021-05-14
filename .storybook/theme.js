@@ -114,7 +114,7 @@ theme.gradient.primary = 'linear-gradient(-45deg, #D0E3F4, #F2EDF1)'
 
 //// SHADOWS
 theme.shadow = {}
-theme.shadow.card = 'unset'
+theme.shadow.card = '0 12px 8px -12px rgba(3, 11, 23, 0.2)'
 // theme.shadow.appNav = `2px 0 2px 0 ${theme.color.dark.t.lighten3}, -3px 0 16px 10px ${theme.color.primary.t.lighten3}`
 
 //// OUTLINE

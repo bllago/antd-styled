@@ -30,47 +30,43 @@ import {
  * @return {ReactComponent}
  */
 
-const Button = (props) => {
-  const theme = useContext(ThemeContext)
-
-  const StyledAntButton = styled(AntButton)(
-    compose(
-      space,
-      color,
-      typography,
-      layout,
-      flexbox,
-      background,
-      border,
-      position,
-      shadow,
-      system({
-        whiteSpace: true,
-        cursor: true,
-        wordBreak: true,
-        zoom: true,
-        transform: true,
-        transition: true
-      }),
-      variant({
-        variants: {
-          white: {
-            color: theme.color.text.dark.secondary,
+const StyledAntButton = styled(AntButton)(({ theme }) =>
+  compose(
+    space,
+    color,
+    typography,
+    layout,
+    flexbox,
+    background,
+    border,
+    position,
+    shadow,
+    system({
+      whiteSpace: true,
+      cursor: true,
+      wordBreak: true,
+      zoom: true,
+      transform: true,
+      transition: true
+    }),
+    variant({
+      variants: {
+        white: {
+          color: theme.color.text.dark.secondary,
+          bg: theme.color.white.default,
+          borderColor: theme.color.white.default,
+          '&:hover': {
+            color: theme.color.text.dark.primary,
             bg: theme.color.white.default,
-            borderColor: theme.color.white.default,
-            '&:hover': {
-              color: theme.color.text.dark.primary,
-              bg: theme.color.white.default,
-              borderColor: theme.color.white.default
-            }
+            borderColor: theme.color.white.default
           }
         }
-      })
-    )
+      }
+    })
   )
+)
 
-  return <StyledAntButton {...props} />
-}
+const Button = (props) => <StyledAntButton {...props} />
 
 Button.propTypes = {
   'Default AntD props': PropTypes.object,
