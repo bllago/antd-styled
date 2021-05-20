@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Input as AntInput } from 'antd'
 import styled from 'styled-components'
@@ -28,7 +27,7 @@ import {
  * @return {ReactComponent}
  */
 
-const StyledInput = styled(AntInput)(
+const Input = styled(AntInput)(
   compose(
     typography,
     space,
@@ -42,10 +41,6 @@ const StyledInput = styled(AntInput)(
     system({ transform: true })
   )
 )
-
-const Input = (props) => {
-  return <StyledInput {...props} />
-}
 
 Input.propTypes = {
   'Default AntD props': PropTypes.object,

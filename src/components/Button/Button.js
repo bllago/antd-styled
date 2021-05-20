@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Button as AntButton } from 'antd'
-import styled, { ThemeContext } from 'styled-components'
+import styled from 'styled-components'
 import {
   compose,
   space,
@@ -30,7 +29,7 @@ import {
  * @return {ReactComponent}
  */
 
-const StyledAntButton = styled(AntButton)(({ theme }) =>
+const Button = styled(AntButton)(({ theme }) =>
   compose(
     space,
     color,
@@ -65,8 +64,6 @@ const StyledAntButton = styled(AntButton)(({ theme }) =>
     })
   )
 )
-
-const Button = (props) => <StyledAntButton {...props} />
 
 Button.propTypes = {
   'Default AntD props': PropTypes.object,
