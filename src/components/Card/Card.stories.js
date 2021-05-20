@@ -20,9 +20,7 @@ export default {
       table: {
         category: 'Custom properties'
       },
-      description: 'Use to disable card shadow.',
-      defaultValue: true,
-      control: { disable: true }
+      description: 'Use to disable card shadow.'
     },
     Packages: {
       table: {

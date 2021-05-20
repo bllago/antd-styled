@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {
@@ -28,7 +27,7 @@ import {
  * @return {ReactComponent}
  */
 
-const Image = styled('img')(
+const Img = styled('img')(
   compose(
     space,
     color,
@@ -49,8 +48,6 @@ const Image = styled('img')(
     })
   )
 )
-
-const Img = (props) => <Image {...props} />
 
 Img.propTypes = {
   src: PropTypes.string.isRequired,

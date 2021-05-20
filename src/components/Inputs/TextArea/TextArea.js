@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Input as AntInput } from 'antd'
 import styled from 'styled-components'
@@ -43,17 +43,17 @@ const StyledTextArea = styled(AntInput.TextArea)(
   )
 )
 
-const TextArea = (props) => {
+const TextArea = forwardRef((props, ref) => {
   return (
     <Fragment>
       {props.size === 'large' ? (
-        <StyledTextArea {...props} fontSize={20} />
+        <StyledTextArea {...props} ref={ref} fontSize={20} />
       ) : (
-        <StyledTextArea {...props} />
+        <StyledTextArea {...props} ref={ref} />
       )}
     </Fragment>
   )
-}
+})
 
 TextArea.propTypes = {
   'Default AntD props': PropTypes.object,

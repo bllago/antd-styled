@@ -1,6 +1,6 @@
 import React from 'react'
 import Dropdown from './Dropdown'
-
+import { Button, Menu } from 'antd'
 export default {
   title: 'Components/Dropdown',
   component: Dropdown,
@@ -28,4 +28,17 @@ export default {
   }
 }
 
-export const Template = (args) => <Dropdown {...args} />
+export const Template = (args) => {
+  const menu = (
+    <Menu>
+      <Menu.Item key='1'>Item 1</Menu.Item>
+      <Menu.Item key='2'>Item 2</Menu.Item>
+      <Menu.Item key='3'>Item 3</Menu.Item>
+    </Menu>
+  )
+  return (
+    <Dropdown {...args} overlay={menu}>
+      <Button>Dropdown</Button>
+    </Dropdown>
+  )
+}

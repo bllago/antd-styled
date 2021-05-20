@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import PhoneInput from 'react-phone-input-2'
 import styled from 'styled-components'
@@ -50,16 +50,17 @@ const phoneInputSizeMap = {
   lg: 'lg'
 }
 
-const StyledPhoneInput = (props) => {
+const StyledPhoneInput = forwardRef((props, ref) => {
   const { size } = props
 
   return (
     <StyledReactPhoneInput
       inputClass={`ant-input ant-input-${phoneInputSizeMap[size]}`}
+      ref={ref}
       {...props}
     />
   )
-}
+})
 
 StyledPhoneInput.propTypes = {
   'Default react-phone-input-2 props': PropTypes.object,
