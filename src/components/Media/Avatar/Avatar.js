@@ -28,7 +28,7 @@ import {
  * @return {ReactComponent}
  */
 
-const StyledAvatar = styled(AntAvatar)(
+const Avatar = styled(AntAvatar)(
   compose(
     space,
     color,
@@ -48,10 +48,6 @@ const StyledAvatar = styled(AntAvatar)(
     })
   )
 )
-
-const Avatar = (props) => {
-  return <StyledAvatar {...props} />
-}
 
 Avatar.propTypes = {
   'Default AntD props': PropTypes.object,
