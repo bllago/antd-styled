@@ -167,7 +167,8 @@ ClinicRemove.defaultProps = {
   question: 'Are you sure you want to remove',
   confirmLabel: 'Yes, remove',
   cancelLabel: 'No, keep',
-  itemName: 'it'
+  itemName: 'it',
+  shape: 'default'
 }
 
 export default ClinicRemove
