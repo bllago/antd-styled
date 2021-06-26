@@ -25,13 +25,14 @@ const AppWrapper = (props) => {
     appNavbar,
     bottomNavbar,
     appHeader,
-    contentProps
+    contentProps,
+    ...rest
   } = props
 
   const theme = useContext(ThemeContext)
 
   return (
-    <Layout height='inherit' flexDirection={horizontal && 'row'} {...props}>
+    <Layout height='inherit' flexDirection={horizontal && 'row'} {...rest}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
       <Content

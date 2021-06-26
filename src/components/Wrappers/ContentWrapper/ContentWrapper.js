@@ -70,9 +70,9 @@ const ContentWrapperTest = (props) => {
 ContentWrapperTest.propTypes = {
   children: PropTypes.node,
   firstLevelHidden: PropTypes.bool,
-  headingProps: PropTypes.object.isRequired,
+  headingProps: PropTypes.object,
   action: PropTypes.node,
-  onBack: PropTypes.func,
+  onBack: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
   backBtnProps: PropTypes.object,
   divided: PropTypes.bool,
   alignMiddle: PropTypes.bool

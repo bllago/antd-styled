@@ -31,7 +31,9 @@ import {
  * @return {ReactComponent}
  */
 
-const StyledText = styled(AntTypography.Text)(({ theme }) =>
+const StyledText = styled(AntTypography.Text).withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => defaultValidatorFn(prop)
+})(({ theme }) =>
   compose(
     space,
     color,
