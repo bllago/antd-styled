@@ -62,70 +62,70 @@ const StyledText = styled(AntTypography.Text).withConfig({
     variant({
       variants: {
         h1: {
-          fontSize: theme.typography.fontSize.h1,
-          lineHeight: theme.typography.lineHeight.h1,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-h1)',
+          lineHeight: 'var(--line-height-h1)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         h2: {
-          fontSize: theme.typography.fontSize.h2,
-          lineHeight: theme.typography.lineHeight.h2,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-h2)',
+          lineHeight: 'var(--line-height-h2)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         h3: {
-          fontSize: theme.typography.fontSize.h3,
-          lineHeight: theme.typography.lineHeight.h3,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-h3)',
+          lineHeight: 'var(--line-height-h3)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         h4: {
-          fontSize: theme.typography.fontSize.h4,
-          lineHeight: theme.typography.lineHeight.h4,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-h4)',
+          lineHeight: 'var(--line-height-h4)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         h5: {
-          fontSize: theme.typography.fontSize.h5,
-          lineHeight: theme.typography.lineHeight.h5,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-h5)',
+          lineHeight: 'var(--line-height-h5)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         h6: {
-          fontSize: theme.typography.fontSize.h6,
-          lineHeight: theme.typography.lineHeight.h6,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-h6)',
+          lineHeight: 'var(--line-height-h6)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         overline: {
-          fontSize: theme.typography.fontSize.overline,
-          lineHeight: theme.typography.lineHeight.overline,
-          fontWeight: theme.typography.fontWeight.medium,
-          letterSpacing: theme.typography.letterSpacing.default
+          fontSize: 'var(--font-size-overline)',
+          lineHeight: 'var(--line-height-overline)',
+          fontWeight: 'var(--font-weight-medium)',
+          letterSpacing: 'var(--letter-spacing-default)'
         },
         body1: {
-          fontSize: theme.typography.fontSize.body1,
-          lineHeight: theme.typography.lineHeight.body1,
-          fontWeight: theme.typography.fontWeight.regular,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-body1)',
+          lineHeight: 'var(--line-height-body1)',
+          fontWeight: 'var(--font-weight-regular)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         body2: {
-          fontSize: theme.typography.fontSize.body2,
-          lineHeight: theme.typography.lineHeight.body2,
-          fontWeight: theme.typography.fontWeight.regular,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-body2)',
+          lineHeight: 'var(--line-height-body2)',
+          fontWeight: 'var(--font-weight-regular)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         caption1: {
-          fontSize: theme.typography.fontSize.caption1,
-          lineHeight: theme.typography.lineHeight.caption1,
-          fontWeight: theme.typography.fontWeight.regular,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-caption1)',
+          lineHeight: 'var(--line-height-caption1)',
+          fontWeight: 'var(--font-weight-regular)',
+          letterSpacing: 'var(--letter-spacing-none)'
         },
         caption2: {
-          fontSize: theme.typography.fontSize.caption2,
-          lineHeight: theme.typography.lineHeight.caption2,
-          fontWeight: theme.typography.fontWeight.regular,
-          letterSpacing: theme.typography.letterSpacing.none
+          fontSize: 'var(--font-size-caption2)',
+          lineHeight: 'var(--line-height-caption2)',
+          fontWeight: 'var(--font-weight-regular)',
+          letterSpacing: 'var(--letter-spacing-none)'
         }
       }
     })

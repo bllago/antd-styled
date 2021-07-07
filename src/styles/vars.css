@@ -279,6 +279,49 @@
   --border-style-base: solid;
 
   /* Typography */
+
+  /* Root */
+
+  /* Font family */
+  --heading-font-family: ;
+  --body-font-family: ;
+
+  /* Font sizes */
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-h5: 16px;
+  --font-size-h6: 14px;
+  --font-size-body1: 16px;
+  --font-size-body2: 14px;
+  --font-size-caption1: 12px;
+  --font-size-caption2: 10px;
+
+  /* Line heights */
+  --line-height-h1: 48px;
+  --line-height-h2: 40px;
+  --line-height-h3: 32px;
+  --line-height-h4: 28px;
+  --line-height-h5: 24px;
+  --line-height-h6: 20px;
+  --line-height-overline: 16px;
+  --line-height-body1:24px;
+  --line-height-body2: 20px;
+  --line-height-caption1: 16px;
+  --line-height-caption2: 12px;
+
+  /* Letter spacings */
+  --letter-spacing-none: 0;
+  --letter-spacing-default: 0.6;
+
+  /* Font weights */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+  
   --font-family: 'Poppins';
   --code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   --font-variant-base: tabular-nums;
@@ -290,16 +333,16 @@
   --text-color-dark: var(--white-11); /* FIXME */
   --text-color-secondary-dark: var(--white-9); /* FIXME */
   --text-selection-bg: var(--primary-color);
-  --font-size-base: 16px;
-  --font-size-lg: 20px;
-  --font-size-sm: 14px;
+  --font-size-base: var(--font-size-body1);
+  --font-size-lg: var(--font-size-h4);
+  --font-size-sm: var(--font-size-body2);
   --heading-color: var(--gray-11);
-  --heading-1-size: 40px;
-  --heading-2-size: 32px;
-  --heading-3-size: 24px;
-  --heading-4-size: 20px;
-  --heading-5-size: 16px;
-  --typography-title-font-weight: 600;
+  --heading-1-size: var(--font-size-h1);
+  --heading-2-size: var(--font-size-h2);
+  --heading-3-size: var(--font-size-h3);
+  --heading-4-size: var(--font-size-h4);
+  --heading-5-size: var(--font-size-h5);
+  --typography-title-font-weight: var(--font-weight-semibold);
   --typography-title-margin-top: 1.2em;
   --typography-title-margin-bottom: 0;
 
