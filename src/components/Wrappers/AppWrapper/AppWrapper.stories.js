@@ -4,6 +4,9 @@ import AppWrapper from './AppWrapper'
 import AppNavbarWrapper from '../AppNavbarWrapper'
 import AppHeaderWrapper from '../AppHeaderWrapper'
 import Box from '../../Box'
+import Container from '../../Grid/Container'
+import Row from '../../Grid/Row'
+import Col from '../../Grid/Col'
 
 import theme from '../../../mockedTheme'
 
@@ -44,5 +47,11 @@ export const Template = (args) => (
       bottomNavbar={<Box bg='#c1c1c1' height={64} />}
       {...args}
     />
+    <Container bounded gutters>
+      <Row>
+        <Col>Test</Col>
+        <Col>Test2</Col>
+      </Row>
+    </Container>
   </ThemeProvider>
 )

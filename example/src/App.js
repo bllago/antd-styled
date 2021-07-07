@@ -2,9 +2,18 @@ import React from 'react'
 import './styles/index.css'
 import theme from './styles/theme'
 import { ThemeProvider } from 'styled-components'
-import { PageWrapper, AppWrapper, AppNavbarWrapper, AppHeaderWrapper, Text, Button } from 'antd-plus'
-import { Container, Row, Col } from '@qonsoll/react-design'
-
+import {
+  PageWrapper,
+  AppWrapper,
+  AppNavbarWrapper,
+  AppHeaderWrapper,
+  Text,
+  Button,
+  Container,
+  Row,
+  Col
+} from 'antd-plus'
+// import { Container, Row, Col } from '@qonsoll/react-design'
 
 const App = () => {
   return (
@@ -15,26 +24,39 @@ const App = () => {
         contentProps={{
           py: 24
         }}
-        appNavbar={<AppNavbarWrapper width={64} minWidth={64} bg="#4c4c4c" />}
-        appHeader={<AppHeaderWrapper height={64} bg="#4c4c4c" />}
-        bottomNavbar={<AppHeaderWrapper height={64} bg="#4c4c4c" />}
+        appNavbar={<AppNavbarWrapper width={64} minWidth={64} bg='#4c4c4c' />}
+        appHeader={<AppHeaderWrapper height={64} bg='#4c4c4c' />}
+        bottomNavbar={<AppHeaderWrapper height={64} bg='#4c4c4c' />}
       >
         <PageWrapper
           alignMiddle
           headingProps={{
-            title: "Clinic members",
+            title: 'Clinic members',
             titleSize: 3,
             textAlign: 'left',
             marginBottom: 24
           }}
-          action={<Button variant="white" size="large">Hello</Button>}
+          action={
+            <Button variant='white' size='large'>
+              Hello
+            </Button>
+          }
           contentWidth={['unset', 'unset', 400, 512]}
           onBack
         >
-          <Container height="inherit" display="flex" flexDirection="column">
-            <Row noGutters height="100%" style={{ flex: 1 }}>
-              <Col cw={12} h="center"><Text textAlign="center">Here will be very long but smart and especialy usefull description...</Text></Col>
-              <Col cw={12} mt="auto"><Button variant="white" block>Hello</Button></Col>
+          <Container height='inherit' display='flex'>
+            <Row noGutters height='100%' style={{ flex: 1 }}>
+              <Col cw={12} h='center'>
+                <Text textAlign='center'>
+                  Here will be very long but smart and especialy usefull
+                  description...
+                </Text>
+              </Col>
+              <Col cw={12} mt='auto'>
+                {/* <Button variant='white' block>
+                  Hello
+                </Button> */}
+              </Col>
             </Row>
           </Container>
         </PageWrapper>

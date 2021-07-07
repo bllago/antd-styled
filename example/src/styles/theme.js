@@ -185,4 +185,12 @@ theme.typography.letterSpacing = {}
 theme.typography.letterSpacing.none = 0
 theme.typography.letterSpacing.default = 0.6
 
+/// / DEFAULT COMPONENT SETTINGS
+theme.defaultComponentSettings = {}
+
+// Back button
+theme.defaultComponentSettings.backButton = {}
+
+theme.defaultComponentSettings.backButton.divided = true
+
 export default theme

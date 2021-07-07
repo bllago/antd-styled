@@ -3,8 +3,11 @@ import Header from './components/LayoutSystem/Header'
 import Sider from './components/LayoutSystem/Sider'
 import Content from './components/LayoutSystem/Content'
 import Footer from './components/LayoutSystem/Footer'
-import Row from './components/LayoutSystem/Row'
-import Col from './components/LayoutSystem/Col'
+// import Row from './components/LayoutSystem/Row'
+// import Col from './components/LayoutSystem/Col'
+import Container from './components/Grid/Container'
+import Row from './components/Grid/Row'
+import Col from './components/Grid/Col'
 import Img from './components/Media/Img'
 import Box from './components/Box'
 import Button from './components/Button'
@@ -48,6 +51,7 @@ export {
   Content,
   Footer,
   Img,
+  Container,
   Row,
   Col,
   Box,
