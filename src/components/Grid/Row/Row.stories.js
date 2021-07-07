@@ -62,13 +62,13 @@ export default {
 export const Default = (args) => (
   <Container>
     <Row {...args}>
-      <Col cw='auto' bg='accent'>
-        <Box bg='dark' color='white'>
+      <Col cw='auto' bg='yellow'>
+        <Box bg='blue' color='white'>
           Column 1
         </Box>
       </Col>
-      <Col cw='auto' bg='accent'>
-        <Box bg='dark' color='white'>
+      <Col cw='auto' bg='yellow'>
+        <Box bg='blue' color='white'>
           Column 2
         </Box>
       </Col>

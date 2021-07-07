@@ -38,7 +38,7 @@ export default {
 
 export const Default = (args) => <Container {...args} />
 
-Default.args = { bg: 'theme', height: '50px' }
+Default.args = { bg: 'green', height: '50px' }
 Default.parameters = {
   docs: {
     source: {
@@ -49,7 +49,7 @@ Default.parameters = {
 
 export const Bounded = (args) => <Container {...args}>With max-width</Container>
 
-Bounded.args = { bg: 'theme', height: '50px', bounded: true }
+Bounded.args = { bg: 'red', height: '50px', bounded: true }
 Bounded.parameters = {
   docs: {
     source: {
@@ -62,7 +62,7 @@ export const WithGutters = (args) => (
   <Container {...args}>Width padding-left and padding-right</Container>
 )
 
-WithGutters.args = { bg: 'theme', height: '50px', gutters: true }
+WithGutters.args = { bg: 'blue', height: '50px', gutters: true }
 WithGutters.parameters = {
   docs: {
     source: {
@@ -75,7 +75,7 @@ export const ContainerWidth = (args) => (
   <Container {...args}>With static max-width</Container>
 )
 
-ContainerWidth.args = { bg: 'theme', height: '50px', sm: true }
+ContainerWidth.args = { bg: 'yellow', height: '50px', sm: true }
 ContainerWidth.parameters = {
   docs: {
     source: {

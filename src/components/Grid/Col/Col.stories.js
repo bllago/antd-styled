@@ -62,16 +62,16 @@ export const Default = (args) => (
   <Container>
     <Row>
       <Col {...args}>
-        <Box bg='theme'>Column 1 BOX</Box>
+        <Box bg='blue'>Column 1 BOX</Box>
       </Col>
       <Col {...args}>
-        <Box bg='theme'>Column 2 BOX</Box>
+        <Box bg='blue'>Column 2 BOX</Box>
       </Col>
     </Row>
   </Container>
 )
 
-Default.args = { bg: 'accent', cw: [12, 12, 6] }
+Default.args = { bg: 'red', cw: [12, 12, 6] }
 Default.parameters = {
   docs: {
     source: {
@@ -84,16 +84,16 @@ export const Order = (args) => (
   <Container>
     <Row>
       <Col bg='accent' order={args.order}>
-        <Box bg='theme'>Column 1 BOX</Box>
+        <Box bg='green'>Column 1 BOX</Box>
       </Col>
       <Col bg='accent' cw={12}>
-        <Box bg='theme'>Column 2 BOX</Box>
+        <Box bg='green'>Column 2 BOX</Box>
       </Col>
       <Col bg='accent' cw={12}>
-        <Box bg='theme'>Column 3 BOX</Box>
+        <Box bg='green'>Column 3 BOX</Box>
       </Col>
       <Col bg='accent' cw={12}>
-        <Box bg='theme'>Column 4 BOX</Box>
+        <Box bg='green'>Column 4 BOX</Box>
       </Col>
     </Row>
   </Container>
@@ -111,11 +111,11 @@ Order.parameters = {
 export const SelfVerticalAlignment = (args) => (
   <Container>
     <Row height='100px'>
-      <Col bg='accent' alignSelf={args.alignSelf}>
-        <Box bg='theme'>Column 1 BOX</Box>
+      <Col bg='#000' alignSelf={args.alignSelf}>
+        <Box bg='yellow'>Column 1 BOX</Box>
       </Col>
-      <Col bg='accent' cw={[12, 12, 6]}>
-        <Box bg='theme'>Column 2 BOX</Box>
+      <Col bg='#000' cw={[12, 12, 6]}>
+        <Box bg='yellow'>Column 2 BOX</Box>
       </Col>
     </Row>
   </Container>
