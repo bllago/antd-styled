@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Row from '../../LayoutSystem/Row'
-import Col from '../../LayoutSystem/Col'
+import Row from '../../Grid/Row'
+import Col from '../../Grid/Col'
 import { Checkbox } from 'antd'
 
 /**

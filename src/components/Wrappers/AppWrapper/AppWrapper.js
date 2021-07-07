@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { ThemeContext } from 'styled-components'
 import Layout from '../../LayoutSystem/Layout'
 import Content from '../../LayoutSystem/Content'
 
@@ -29,14 +28,19 @@ const AppWrapper = (props) => {
     ...rest
   } = props
 
-  const theme = useContext(ThemeContext)
-
   return (
     <Layout height='inherit' flexDirection={horizontal && 'row'} {...rest}>
       {horizontal && appNavbar}
       {!horizontal && appHeader}
       <Content
-        px={theme.grid.paddings}
+        px={[
+          'var(--layout-padding-default)',
+          'var(--layout-padding-sm)',
+          'var(--layout-padding-md)',
+          'var(--layout-padding-lg)',
+          'var(--layout-padding-xl)',
+          'var(--layout-padding-xxl)'
+        ]}
         height='100%'
         overflow='auto'
         {...contentProps}

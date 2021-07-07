@@ -51,13 +51,13 @@ const Button = styled(AntButton)(({ theme }) =>
     variant({
       variants: {
         white: {
-          color: theme.color.text.dark.secondary,
-          bg: theme.color.white.default,
-          borderColor: theme.color.white.default,
+          color: 'var(--btn-white-color)',
+          bg: 'var(--btn-white-bg)',
+          borderColor: 'var(--btn-white-border)',
           '&:hover': {
-            color: theme.color.text.dark.primary,
-            bg: theme.color.white.default,
-            borderColor: theme.color.white.default
+            color: 'var(--btn-text-hover-color)',
+            bg: 'var(--btn-white-hover-bg)',
+            borderColor: 'var(--btn-white-hover-border)'
           }
         }
       }

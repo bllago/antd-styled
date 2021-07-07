@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { ThemeContext } from 'styled-components'
+import styled from 'styled-components'
 import { Card as AntCard } from 'antd'
 import {
   compose,
@@ -47,8 +47,8 @@ const StyledAntCard = styled(AntCard)(
 
 const Card = (props) => {
   const { shadowless } = props
-  const theme = useContext(ThemeContext)
-  const boxShadowProps = shadowless ? 'unset' : theme.shadow.card
+
+  const boxShadowProps = shadowless ? 'unset' : 'var(--card-radius)'
 
   return <StyledAntCard boxShadow={boxShadowProps} {...props} />
 }

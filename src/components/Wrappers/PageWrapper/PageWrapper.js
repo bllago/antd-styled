@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import PositioningWrapper from '../PositioningWrapper'
 import ContentWrapper from '../ContentWrapper'
 import Graphic from '../../Media/Graphic'
-import { ThemeContext } from 'styled-components'
 
 /**
  * PageWrapper (20 Apr 2021)
@@ -39,10 +38,9 @@ const PageWrapper = (props) => {
     headingProps,
     action
   } = props
-  const theme = useContext(ThemeContext)
 
   const DEFAULT_BACK_BUTTON_PROPS = {
-    divided: theme.defaultComponentSettings.backButton.divided
+    divided: true
   }
 
   return (

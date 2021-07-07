@@ -1,7 +1,9 @@
 import React from 'react'
-import "antd/dist/antd.css";
-import {ThemeProvider} from 'styled-components'
-import theme from './theme'
+import "../src/styles/vars.css"
+import "../src/styles/antd.css"
+// import "antd/dist/antd.css";
+// import {ThemeProvider} from 'styled-components'
+// import theme from './theme'
 
 export const parameters = {
   layout: 'centered',
@@ -13,8 +15,8 @@ export const parameters = {
 
 export const decorators = [
  (Story) => (
-	 <ThemeProvider theme = {theme}>
+	//  <ThemeProvider theme = {theme}>
 		 <Story/>
-	 </ThemeProvider>
+	//  </ThemeProvider>
  )
 ]
