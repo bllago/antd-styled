@@ -9,8 +9,6 @@ import {
   positionArgTypes,
   shadowArgTypes
 } from '../../../helpers/arg-types'
-import { ThemeProvider } from 'styled-components'
-import { Theme } from '../../../design-system/Theme'
 
 export default {
   title: 'Grid/Container',
@@ -38,11 +36,7 @@ export default {
   }
 }
 
-export const Default = (args) => (
-  <ThemeProvider theme={Theme}>
-    <Container {...args} />
-  </ThemeProvider>
-)
+export const Default = (args) => <Container {...args} />
 
 Default.args = { bg: 'theme', height: '50px' }
 Default.parameters = {
@@ -53,11 +47,7 @@ Default.parameters = {
   }
 }
 
-export const Bounded = (args) => (
-  <ThemeProvider theme={Theme}>
-    <Container {...args}>With max-width</Container>
-  </ThemeProvider>
-)
+export const Bounded = (args) => <Container {...args}>With max-width</Container>
 
 Bounded.args = { bg: 'theme', height: '50px', bounded: true }
 Bounded.parameters = {
@@ -69,9 +59,7 @@ Bounded.parameters = {
 }
 
 export const WithGutters = (args) => (
-  <ThemeProvider theme={Theme}>
-    <Container {...args}>Width padding-left and padding-right</Container>
-  </ThemeProvider>
+  <Container {...args}>Width padding-left and padding-right</Container>
 )
 
 WithGutters.args = { bg: 'theme', height: '50px', gutters: true }
@@ -84,9 +72,7 @@ WithGutters.parameters = {
 }
 
 export const ContainerWidth = (args) => (
-  <ThemeProvider theme={Theme}>
-    <Container {...args}>With static max-width</Container>
-  </ThemeProvider>
+  <Container {...args}>With static max-width</Container>
 )
 
 ContainerWidth.args = { bg: 'theme', height: '50px', sm: true }
