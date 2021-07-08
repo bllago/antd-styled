@@ -1,5 +1,4 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 import AppWrapper from './AppWrapper'
 import AppNavbarWrapper from '../AppNavbarWrapper'
 import AppHeaderWrapper from '../AppHeaderWrapper'
@@ -7,8 +6,6 @@ import Box from '../../Box'
 import Container from '../../Grid/Container'
 import Row from '../../Grid/Row'
 import Col from '../../Grid/Col'
-
-import theme from '../../../mockedTheme'
 
 export default {
   title: 'Components/Wrappers/AppWrapper',
@@ -37,7 +34,7 @@ export default {
 }
 
 export const Template = (args) => (
-  <ThemeProvider theme={theme}>
+  <>
     <AppWrapper
       bg='#f2f2f2'
       width='90vw'
@@ -53,5 +50,5 @@ export const Template = (args) => (
         <Col>Test2</Col>
       </Row>
     </Container>
-  </ThemeProvider>
+  </>
 )

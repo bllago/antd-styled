@@ -15,7 +15,6 @@ import {
   shadow,
   system
 } from 'styled-system'
-import './PhoneInput.module.css'
 
 /**
  * PhoneInput (24 Mar 2021)

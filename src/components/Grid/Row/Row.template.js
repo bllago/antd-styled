@@ -13,7 +13,7 @@ import {
   system
 } from 'styled-system'
 
-import { BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
+import { DEFAULTS, BREAKPOINTS, NEGATIVE_GUTTERS_MAP } from '../../../constants'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -35,8 +35,14 @@ const StyledDiv = styled.div`
   }
 
   &.no-outer-gutters {
-    margin-left: $negative-gutter-default;
-    margin-right: $negative-gutter-default;
+    margin-left: ${DEFAULTS.negativeGutterDefault};
+    margin-right: ${DEFAULTS.negativeGutterDefault};
+    & > .col:first-child {
+      padding-left: 0;
+    }
+    & > .col:last-child {
+      padding-right: 0;
+    }
     ${(props) => {
       const breakpoints = Object.keys(BREAKPOINTS)
       return breakpoints.map((breakpoint) => {

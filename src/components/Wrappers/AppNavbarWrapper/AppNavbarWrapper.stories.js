@@ -1,9 +1,6 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 import AppWrapper from '../AppWrapper'
 import AppNavbarWrapper from './AppNavbarWrapper'
-
-import theme from '../../../mockedTheme'
 
 export default {
   title: 'Components/Wrappers/AppNavbarWrapper',
@@ -21,13 +18,11 @@ export default {
 }
 
 export const Template = (args) => (
-  <ThemeProvider theme={theme}>
-    <AppWrapper
-      horizontal
-      bg='#f2f2f2'
-      width='90vw'
-      height='90vh'
-      appNavbar={<AppNavbarWrapper bg='#4c4c4c' {...args} />}
-    />
-  </ThemeProvider>
+  <AppWrapper
+    horizontal
+    bg='#f2f2f2'
+    width='90vw'
+    height='90vh'
+    appNavbar={<AppNavbarWrapper bg='#4c4c4c' {...args} />}
+  />
 )

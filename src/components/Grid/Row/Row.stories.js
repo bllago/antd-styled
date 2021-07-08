@@ -60,7 +60,7 @@ export default {
 }
 
 export const Default = (args) => (
-  <Container>
+  <Container gutters>
     <Row {...args}>
       <Col cw='auto' bg='yellow'>
         <Box bg='blue' color='white'>

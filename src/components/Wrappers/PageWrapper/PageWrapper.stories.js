@@ -1,10 +1,7 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 import AppWrapper from '../AppWrapper'
 import AppNavbarWrapper from '../AppNavbarWrapper'
 import PageWrapper from './PageWrapper'
-
-import theme from '../../../mockedTheme'
 
 export default {
   title: 'Components/Wrappers/PageWrapper',
@@ -55,25 +52,23 @@ export default {
 }
 
 export const Template = (args) => (
-  <ThemeProvider theme={theme}>
-    <AppWrapper
-      horizontal
-      bg='#f2f2f2'
-      width='90vw'
-      height='90vh'
-      appNavbar={<AppNavbarWrapper width={200} bg='#4c4c4c' />}
+  <AppWrapper
+    horizontal
+    bg='#f2f2f2'
+    width='90vw'
+    height='90vh'
+    appNavbar={<AppNavbarWrapper width={200} bg='#4c4c4c' />}
+  >
+    <PageWrapper
+      headingProps={{
+        title: 'Title',
+        titleSize: 3,
+        textAlign: 'left',
+        subTitle: 'Here will be subtitle...'
+      }}
+      {...args}
     >
-      <PageWrapper
-        headingProps={{
-          title: 'Title',
-          titleSize: 3,
-          textAlign: 'left',
-          subTitle: 'Here will be subtitle...'
-        }}
-        {...args}
-      >
-        Here will be content very soon! :)
-      </PageWrapper>
-    </AppWrapper>
-  </ThemeProvider>
+      Here will be content very soon! :)
+    </PageWrapper>
+  </AppWrapper>
 )
